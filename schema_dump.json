@@ -1,0 +1,14 @@
+{
+  "mutations": {
+    "name": "Mutation",
+    "inputFields": null
+  },
+  "stockInput": {
+    "name": "SaveStockLocationsInput",
+    "inputFields": [
+      {
+        "name": "productStockLocationInputs"
+      }
+    ]
+  }
+}
