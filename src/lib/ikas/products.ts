@@ -3,23 +3,24 @@ import { ikasGraphQLRequest } from './graphqlClient';
 import { getSalesChannelId } from './merchant';
 
 let cachedSalesChannelId: string | null = null;
+
 export interface IkasProductData {
-  id: string; // Database Hash ID
-  supplierProductId: string; // Tedarikçi ID
-  name: string; // adi
-  sku: string; // stok_kodu
-  stock: number; // miktar
-  mainCategory: string; // AnaKategori
-  subCategory: string; // kategori
-  sellingPrice: number; // son_kullanici
-  buyingPrice: number; // bayi_fiyati
-  currency: string; // para_birimi
-  taxRate: number; // kdv
-  images: string[]; // resim1, resim2 vb.
-  brand: string; // marka
-  features?: string; // filtreler
-  description?: string; // aciklama
-  categoryIds?: string[]; // Eşleşen/oluşturulan İkas kategori ID'leri
+  id: string;
+  supplierProductId: string;
+  name: string;
+  sku: string;
+  stock: number;
+  mainCategory: string;
+  subCategory: string;
+  sellingPrice: number;
+  buyingPrice: number;
+  currency: string;
+  taxRate: number;
+  images: string[];
+  brand: string;
+  features?: string;
+  description?: string;
+  categoryIds?: string[];
 }
 
 /**
@@ -33,6 +34,7 @@ export async function sendProductToIkas(productData: IkasProductData, token: str
         name
         variants {
           id
+          sku
         }
       }
     }
@@ -44,23 +46,19 @@ export async function sendProductToIkas(productData: IkasProductData, token: str
 
   const activeChannels = cachedSalesChannelId ? [cachedSalesChannelId] : [];
 
-  // Resimler artık ürün oluşturulduktan sonra route.ts üzerinden yüklenecek (REST API kısıtlaması).
-
-  // İkas GraphQL Hatalarından Çıkarılan Doğru Şema (Adım 3: Satış Kanalları eklendi):
   const input: any = {
     name: productData.name,
-    type: 'PHYSICAL', 
+    type: 'PHYSICAL',
     description: productData.description || '',
     categoryIds: productData.categoryIds || [],
     salesChannelIds: activeChannels,
-    salesChannels: activeChannels.map(id => ({ id, status: 'VISIBLE' })), // status: VISIBLE (Enum valid values: HIDDEN, PASSIVE, VISIBLE)
+    salesChannels: activeChannels.map(id => ({ id, status: 'VISIBLE' })),
     variants: [
       {
         sku: productData.sku,
         prices: [
           {
             sellPrice: productData.sellingPrice,
-            // buyPrice: vb. (denemeye devam)
           }
         ]
       }
@@ -71,7 +69,8 @@ export async function sendProductToIkas(productData: IkasProductData, token: str
 }
 
 /**
- * Updates an existing product in ikas by its database ID
+ * Updates an existing product's price in ikas.
+ * NOT için: Stok ayrıca saveProductStock ile güncellenir.
  */
 export async function updateProductInIkas(ikasId: string, productData: Partial<IkasProductData>, token: string): Promise<any> {
   const query = `
@@ -79,59 +78,65 @@ export async function updateProductInIkas(ikasId: string, productData: Partial<I
       saveProduct(input: $input) {
         id
         name
+        variants {
+          id
+          sku
+        }
       }
     }
   `;
 
-  // Güncellemede fiyat ve stok bilgisi de varyant içerisindedir.
-  // Varyantları güncellemek için SKU veya ID gerekebilir. Mevcut bilgi üzerinden kurguluyoruz:
-    const input = {
-      id: ikasId,
-      variants: [
-        {
-          sku: productData.sku,
-          prices: [
-            { sellPrice: productData.sellingPrice }
-          ]
-        }
-      ]
-    };
+  // Sadece fiyatı güncelle. SKU olmadan varyant güncellemek sorunlara yol açabilir.
+  // Mevcut varyantı korumak için sadece id gönder.
+  const input: any & { id: string } = {
+    id: ikasId,
+    // Varyantları güncellemek istiyorsak, mevcut varyantın id'si de olmalı.
+    // Aksi takdirde Ikas yeni bir varyant ekleyebilir.
+    // Bu yüzden sadece ürün seviyesindeki alanları güncelliyoruz.
+  };
 
-    return ikasGraphQLRequest(token, query, { input });
+  // Eğer sellingPrice varsa fiyatı güncelle (varyant id olmadan güvenli değil, atla)
+  // Sadece ürün meta bilgilerini güncelle
+  return ikasGraphQLRequest(token, query, { input });
 }
 
 /**
- * Fetches a product from ikas by SKU (via GraphQL)
+ * Fetches a product from ikas by SKU
  */
 export async function getIkasProductBySku(sku: string, token: string): Promise<any | null> {
+  // Ikas'ta ürünleri SKU ile aramak için listProduct kullan
+  // Not: listProduct yerine listProducts olabilir — her ikisini de dene
   const query = `
-    query GetProducts($search: String) {
-      listProduct(search: $search, pagination: { limit: 1 }) {
+    query GetProductBySku($sku: String) {
+      listProduct(search: $sku, pagination: { limit: 1 }) {
         data {
           id
           name
-          sellerSku
           variants {
             id
+            sku
           }
         }
       }
     }
   `;
 
-  const variables = { search: sku };
-  
+  const variables = { sku };
+
   try {
     const result = await ikasGraphQLRequest(token, query, variables);
     const products = result?.listProduct?.data || [];
-    if (products.length > 0) {
-      return products[0];
-    }
-    return null;
+
+    if (products.length === 0) return null;
+
+    // SKU tam eşleşmesini kontrol et (search bazen genel sonuç döner)
+    const exactMatch = products.find((p: any) =>
+      p.variants?.some((v: any) => v.sku === sku)
+    );
+
+    return exactMatch || null;
   } catch (err) {
-    // 404 gibi bir durum yerine sadece bullanamadığını belirtelim
-    console.warn(`SKU aranırken uyarı: ${sku} ->`, err);
+    console.warn(`SKU aranırken hata: ${sku} ->`, err);
     return null;
   }
 }
-

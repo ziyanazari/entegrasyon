@@ -1,36 +1,50 @@
 // src/lib/ikas/stock.ts
 import { ikasGraphQLRequest } from './graphqlClient';
 
+/**
+ * Ikas'ta bir ürün varyantının stok miktarını günceller.
+ * 
+ * GERÇEK ŞEMA (introspection ile doğrulandı):
+ * 
+ * mutation SaveProductStock($input: SaveStockLocationsInput!) {
+ *   saveProductStockLocations(input: $input)
+ * }
+ * 
+ * SaveStockLocationsInput {
+ *   productStockLocationInputs: [ProductStockLocationInput!]!
+ * }
+ * 
+ * ProductStockLocationInput {  ← productId BURADA, üst seviyede değil!
+ *   productId:       String!
+ *   variantId:       String!
+ *   stockLocationId: String!
+ *   stockCount:      Float!
+ * }
+ */
 export async function saveProductStock(
-  token: string, 
-  branchId: string, 
-  productId: string, 
-  variantId: string, 
+  token: string,
+  stockLocationId: string,
+  productId: string,
+  variantId: string,
   stockQuantity: number
-) {
+): Promise<void> {
   const query = `
     mutation SaveProductStock($input: SaveStockLocationsInput!) {
       saveProductStockLocations(input: $input)
     }
   `;
 
-  // Schema'nın beklediği varsayılan taslağa göre
+  // productId, variantId, stockLocationId, stockCount hepsi productStockLocationInputs içinde!
   const input = {
     productStockLocationInputs: [
       {
-        branchId,
         productId,
-        productVariantId: variantId,
-        stock: stockQuantity
+        variantId,
+        stockLocationId,
+        stockCount: stockQuantity,
       }
     ]
   };
 
-  try {
-    const response = await ikasGraphQLRequest(token, query, { input });
-    return response;
-  } catch (error) {
-    console.error(`[Save Stock] Error updating stock for product ${productId}:`, error);
-    throw error;
-  }
+  await ikasGraphQLRequest(token, query, { input });
 }

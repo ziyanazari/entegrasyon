@@ -13,13 +13,13 @@ export async function getIkasToken(): Promise<string> {
 
   const clientId = process.env.IKAS_CLIENT_ID;
   const clientSecret = process.env.IKAS_CLIENT_SECRET;
-  const storeName = process.env.IKAS_STORE_NAME || 'denizavm'; 
+  // ebijuteri = ebijuteri.myikas.com — store name'i .env'den al
+  const storeName = process.env.IKAS_STORE_NAME || 'ebijuteri';
 
   if (!clientId || !clientSecret) {
-    throw new Error('Missing IKAS API credentials in environment variables.');
+    throw new Error('IKAS_CLIENT_ID veya IKAS_CLIENT_SECRET eksik. Lütfen .env.local dosyasını kontrol edin.');
   }
 
-  // api.myikas.com adresi global login adresidir
   const url = `https://${storeName}.myikas.com/api/admin/oauth/token`;
 
   const body = new URLSearchParams({
@@ -30,27 +30,24 @@ export async function getIkasToken(): Promise<string> {
 
   const response = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: body.toString(),
   });
 
   if (!response.ok) {
     const errorBody = await response.text();
-    console.error('Failed to fetch ikas token:', errorBody);
-    throw new Error(`ikas API returned ${response.status} during authentication`);
+    console.error('Ikas token alınamadı:', errorBody);
+    throw new Error(`Ikas API authentication ${response.status}: ${errorBody}`);
   }
 
   const data = await response.json();
-  
+
   if (!data.access_token) {
-    throw new Error('Access token missing in the response from ikas');
+    throw new Error('Ikas yanıtında access_token bulunamadı: ' + JSON.stringify(data));
   }
 
-  // Token cache mechanism
   const expiresIn = data.expires_in ? parseInt(data.expires_in, 10) : 3600;
-  tokenExpiresAt = Date.now() + (expiresIn * 1000) - 60000; // 1 dakika tolerans
+  tokenExpiresAt = Date.now() + (expiresIn * 1000) - 60000;
   cachedToken = data.access_token;
 
   return cachedToken!;

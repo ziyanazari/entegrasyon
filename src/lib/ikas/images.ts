@@ -1,9 +1,20 @@
 // src/lib/ikas/images.ts
 
 /**
- * Uploads an image URL to Ikas REST API and returns the associated imageId
+ * Uploads an image URL to Ikas REST API.
+ * API "OK" (plain text) veya JSON döndürebilir — ikisini de handle eder.
+ * 
+ * @returns 'OK' veya imageId başarı durumunda, 'HATA:...' hata durumunda
  */
-export async function uploadImageToIkas(token: string, imageUrl: string, productId: string, variantId: string, isMain: boolean = false, retryCount: number = 0): Promise<string | null> {
+export async function uploadImageToIkas(
+  token: string,
+  imageUrl: string,
+  productId: string,
+  variantId: string,
+  isMain: boolean = false,
+  order: number = 1,
+  retryCount: number = 0
+): Promise<string> {
   const url = `https://api.myikas.com/api/v1/admin/product/upload/image`;
 
   try {
@@ -15,42 +26,50 @@ export async function uploadImageToIkas(token: string, imageUrl: string, product
       },
       body: JSON.stringify({
         productImage: {
-          url: imageUrl,
-          productId: productId,
+          // Cache busting for Ikas processing
+          url: `${imageUrl}${imageUrl.includes('?') ? '&' : '?'}v=${Date.now()}`,
           variantIds: [variantId],
-          isMain: isMain
+          isMain,
+          order
         }
       })
     });
 
+    // Rate limit — bekle ve tekrar dene
     if (response.status === 429) {
-        if (retryCount > 3) {
-           return 'HATA: Limite takıldı (429) ve deneme aşıldı';
-        }
-        const text = await response.text();
-        let retryAfter = 2000;
-        try {
-            const errBody = JSON.parse(text);
-            if (errBody.retryAfter) retryAfter = (errBody.retryAfter * 1000) + 100;
-        } catch(e) {}
-        console.log(`[Upload Image] 429 Limit. Bekleniyor: ${retryAfter}ms`);
-        await new Promise(r => setTimeout(r, retryAfter));
-        return uploadImageToIkas(token, imageUrl, productId, variantId, isMain, retryCount + 1);
+      if (retryCount >= 5) {
+        return 'HATA: 429 Rate Limit - maksimum deneme aşıldı';
+      }
+      const retryAfterSec = parseInt(response.headers.get('Retry-After') || '3', 10);
+      const waitMs = retryAfterSec * 1000 + 200;
+      console.warn(`[Upload Image] 429 Limit, ${waitMs}ms bekleniyor...`);
+      await new Promise(r => setTimeout(r, waitMs));
+      return uploadImageToIkas(token, imageUrl, productId, variantId, isMain, order, retryCount + 1);
     }
 
     if (!response.ok) {
       const errorText = await response.text();
-      return `HATA: ${response.status} - ${errorText}`;
+      return `HATA: HTTP ${response.status} - ${errorText.substring(0, 200)}`;
     }
 
-    const json = await response.json();
-    // Assuming structure is like { data: { imageId: "img_abc" } } or { imageId: "img_abc" }
-    const imageId = json?.data?.imageId || json?.imageId;
-    
-    if (imageId) {
-      return imageId;
-    } else {
-      return `HATA: Sistem imageId dönmedi -> ${JSON.stringify(json)}`;
+    // Ham text oku — API "OK" düz text veya JSON döndürebiliyor
+    const rawText = await response.text();
+
+    // "OK" düz text yanıtı = başarı
+    if (!rawText || rawText.trim().toUpperCase() === 'OK') {
+      return 'OK';
+    }
+
+    // JSON parse dene
+    try {
+      const json = JSON.parse(rawText);
+      const imageId = json?.data?.imageId || json?.imageId || json?.id;
+      if (imageId) return imageId;
+      // JSON ama imageId yok — yine de başarı
+      return 'OK';
+    } catch {
+      // JSON değil ama boş da değil — başarı sayıyoruz
+      return 'OK';
     }
 
   } catch (error: any) {

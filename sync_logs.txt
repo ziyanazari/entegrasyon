@@ -1,997 +1,136 @@
-[2026-03-28T21:57:06.590Z] --------------------------------------------------
-[2026-03-28T21:57:06.591Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: 1
-[2026-03-28T21:57:16.929Z] SYNC BİTTİ. Başarılı: 0, Hata: 0
-[2026-03-28T21:58:59.152Z] --------------------------------------------------
-[2026-03-28T21:58:59.153Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: 12
-[2026-03-28T21:59:12.145Z] SKU: HH850-KS | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T21:59:12.368Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-1.jpg
-[2026-03-28T21:59:13.037Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-2.jpg
-[2026-03-28T21:59:13.037Z] SKU: HH850-KS | BAŞARILI (Yeni)
-[2026-03-28T21:59:13.038Z] SYNC BİTTİ. Başarılı: 1, Hata: 0
-[2026-03-28T22:00:59.471Z] --------------------------------------------------
-[2026-03-28T22:00:59.471Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: 12
-[2026-03-28T22:01:12.272Z] SKU: HH850-KS | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:12.462Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-1.jpg
-[2026-03-28T22:01:12.576Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-2.jpg
-[2026-03-28T22:01:12.577Z] SKU: HH850-KS | BAŞARILI (Yeni)
-[2026-03-28T22:01:12.577Z] SYNC BİTTİ. Başarılı: 1, Hata: 0
-[2026-03-28T22:01:32.967Z] --------------------------------------------------
-[2026-03-28T22:01:32.968Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: Tümü
-[2026-03-28T22:01:45.778Z] SKU: HH850-KS | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:46.088Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-1.jpg
-[2026-03-28T22:01:46.220Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-2.jpg
-[2026-03-28T22:01:46.220Z] SKU: HH850-KS | BAŞARILI (Yeni)
-[2026-03-28T22:01:46.644Z] SKU: HH1201 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:46.899Z] SKU: HH1201 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1600761704_HH1201-1.jpg
-[2026-03-28T22:01:47.014Z] SKU: HH1201 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1600761704_HH1201-2.jpg
-[2026-03-28T22:01:47.015Z] SKU: HH1201 | BAŞARILI (Yeni)
-[2026-03-28T22:01:47.670Z] SKU: BB3566 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:47.820Z] SKU: BB3566 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1618479989_BB3567-1.jpg
-[2026-03-28T22:01:47.951Z] SKU: BB3566 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1618479989_BB3567-2.jpg
-[2026-03-28T22:01:47.952Z] SKU: BB3566 | BAŞARILI (Yeni)
-[2026-03-28T22:01:48.335Z] SKU: BB3569 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:48.568Z] SKU: BB3569 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1618480098_BB3570-2.jpg
-[2026-03-28T22:01:48.718Z] SKU: BB3569 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1618480098_BB3570-1.jpg
-[2026-03-28T22:01:48.719Z] SKU: BB3569 | BAŞARILI (Yeni)
-[2026-03-28T22:01:48.884Z] SKU: EB3212 | HATA: Ikas HTTP Error 429: {"retryAfter":2.541,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.444Z","error":"Too Many Requests"}
-[2026-03-28T22:01:49.266Z] SKU: EB3238 | HATA: Ikas HTTP Error 429: {"retryAfter":2.16,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.447Z","error":"Too Many Requests"}
-[2026-03-28T22:01:49.433Z] SKU: EB3240 | HATA: Ikas HTTP Error 429: {"retryAfter":1.996,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:49.610Z] SKU: BYK2052 | HATA: Ikas HTTP Error 429: {"retryAfter":1.812,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.444Z","error":"Too Many Requests"}
-[2026-03-28T22:01:49.814Z] SKU: BYK2053 | HATA: Ikas HTTP Error 429: {"retryAfter":1.613,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:49.977Z] SKU: BYK2067 | HATA: Ikas HTTP Error 429: {"retryAfter":1.448,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.444Z","error":"Too Many Requests"}
-[2026-03-28T22:01:50.205Z] SKU: BYK2068 | HATA: Ikas HTTP Error 429: {"retryAfter":1.219,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.444Z","error":"Too Many Requests"}
-[2026-03-28T22:01:50.397Z] SKU: BYK2073 | HATA: Ikas HTTP Error 429: {"retryAfter":1.028,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:50.579Z] SKU: BKO5902 | HATA: Ikas HTTP Error 429: {"retryAfter":0.843,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:50.749Z] SKU: BKO5903 | HATA: Ikas HTTP Error 429: {"retryAfter":0.674,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:50.916Z] SKU: BKO5909 | HATA: Ikas HTTP Error 429: {"retryAfter":0.507,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.444Z","error":"Too Many Requests"}
-[2026-03-28T22:01:51.084Z] SKU: BKO5926 | HATA: Ikas HTTP Error 429: {"retryAfter":0.338,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:51.253Z] SKU: BB4117 | HATA: Ikas HTTP Error 429: {"retryAfter":0.169,"limit":50,"remaining":0,"reset":"2026-03-28T22:01:51.443Z","error":"Too Many Requests"}
-[2026-03-28T22:01:51.636Z] SKU: BB4119 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:51.764Z] SKU: BB4119 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1637662326_BB4119.jpg
-[2026-03-28T22:01:51.765Z] SKU: BB4119 | BAŞARILI (Yeni)
-[2026-03-28T22:01:52.165Z] SKU: BB4172 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:52.280Z] SKU: BB4172 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1641983775_BB4172.jpg
-[2026-03-28T22:01:52.400Z] SKU: BB4172 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1641983775_BB4172-2.jpg
-[2026-03-28T22:01:52.401Z] SKU: BB4172 | BAŞARILI (Yeni)
-[2026-03-28T22:01:52.850Z] SKU: BYK2190 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:53.047Z] SKU: BYK2190 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1643810050_byk2190-1.jpg
-[2026-03-28T22:01:53.223Z] SKU: BYK2190 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1643810050_byk2190.jpg
-[2026-03-28T22:01:53.224Z] SKU: BYK2190 | BAŞARILI (Yeni)
-[2026-03-28T22:01:53.707Z] SKU: BYK2191 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:53.868Z] SKU: BYK2191 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1643810162_byk2191-1.jpg
-[2026-03-28T22:01:53.997Z] SKU: BYK2191 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1643810162_byk2191-2.jpg
-[2026-03-28T22:01:53.997Z] SKU: BYK2191 | BAŞARILI (Yeni)
-[2026-03-28T22:01:54.874Z] SKU: BKO6160 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:55.152Z] SKU: BKO6160 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1645076016_BKO6160-1.jpg
-[2026-03-28T22:01:55.258Z] SKU: BKO6160 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1645076015_BKO6160-2.jpg
-[2026-03-28T22:01:55.423Z] SKU: BKO6160 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1645076016_BKO6160-3.jpg
-[2026-03-28T22:01:55.424Z] SKU: BKO6160 | BAŞARILI (Yeni)
-[2026-03-28T22:01:55.831Z] SKU: BKP6222 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:55.945Z] SKU: BKP6222 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1645711827_BKP6222-1.jpg
-[2026-03-28T22:01:56.047Z] SKU: BKP6222 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1645711827_BKP6222-2.jpg
-[2026-03-28T22:01:56.048Z] SKU: BKP6222 | BAŞARILI (Yeni)
-[2026-03-28T22:01:56.416Z] SKU: BKO6207 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:56.529Z] SKU: BKO6207 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646049722_BKO6207-1.jpg
-[2026-03-28T22:01:56.670Z] SKU: BKO6207 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646049722_BKO6207-2.jpg
-[2026-03-28T22:01:56.671Z] SKU: BKO6207 | BAŞARILI (Yeni)
-[2026-03-28T22:01:57.323Z] SKU: BKO6226 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:57.443Z] SKU: BKO6226 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391599_BKO6226-1.jpg
-[2026-03-28T22:01:57.562Z] SKU: BKO6226 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391599_BKO6226-2.jpg
-[2026-03-28T22:01:57.562Z] SKU: BKO6226 | BAŞARILI (Yeni)
-[2026-03-28T22:01:57.939Z] SKU: BKO6227 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:58.061Z] SKU: BKO6227 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391664_BKO6227-1.jpg
-[2026-03-28T22:01:58.163Z] SKU: BKO6227 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391664_BKO6227-2.jpg
-[2026-03-28T22:01:58.164Z] SKU: BKO6227 | BAŞARILI (Yeni)
-[2026-03-28T22:01:58.610Z] SKU: BKO6229 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:01:58.717Z] SKU: BKO6229 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391787_BKO6229-1.jpg
-[2026-03-28T22:01:59.574Z] SKU: BKO6229 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1646391786_BKO6229-2.jpg
-[2026-03-28T22:01:59.574Z] SKU: BKO6229 | BAŞARILI (Yeni)
-[2026-03-28T22:01:59.737Z] SKU: BKO6230 | HATA: Ikas HTTP Error 429: {"retryAfter":1.686,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:01:59.962Z] SKU: BKO6242 | HATA: Ikas HTTP Error 429: {"retryAfter":1.463,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:00.150Z] SKU: BKO6243 | HATA: Ikas HTTP Error 429: {"retryAfter":1.275,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:00.548Z] SKU: BYK2237 | HATA: Ikas HTTP Error 429: {"retryAfter":0.876,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:00.725Z] SKU: BKP6316 | HATA: Ikas HTTP Error 429: {"retryAfter":0.698,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.444Z","error":"Too Many Requests"}
-[2026-03-28T22:02:00.886Z] SKU: BKO6332 | HATA: Ikas HTTP Error 429: {"retryAfter":0.537,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:01.050Z] SKU: BKO6392 | HATA: Ikas HTTP Error 429: {"retryAfter":0.373,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:01.225Z] SKU: BKO6435 | HATA: Ikas HTTP Error 429: {"retryAfter":0.199,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:01.395Z] SKU: BKO6437 | HATA: Ikas HTTP Error 429: {"retryAfter":0.029,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:01.445Z","error":"Too Many Requests"}
-[2026-03-28T22:02:01.845Z] SKU: BKO6438 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:01.955Z] SKU: BKO6438 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251535_BKO6438.jpg
-[2026-03-28T22:02:02.087Z] SKU: BKO6438 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251535_BKO6438-2.jpg
-[2026-03-28T22:02:02.088Z] SKU: BKO6438 | BAŞARILI (Yeni)
-[2026-03-28T22:02:02.476Z] SKU: BKO6439 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:02.618Z] SKU: BKO6439 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251655_BKO6439.jpg
-[2026-03-28T22:02:02.740Z] SKU: BKO6439 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251655_BKO6439-2.jpg
-[2026-03-28T22:02:02.741Z] SKU: BKO6439 | BAŞARILI (Yeni)
-[2026-03-28T22:02:03.132Z] SKU: BKO6440 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:03.240Z] SKU: BKO6440 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251709_BKO6440.jpg
-[2026-03-28T22:02:03.410Z] SKU: BKO6440 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251709_BKO6440-2.jpg
-[2026-03-28T22:02:03.411Z] SKU: BKO6440 | BAŞARILI (Yeni)
-[2026-03-28T22:02:03.832Z] SKU: BKO6441 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:03.959Z] SKU: BKO6441 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251780_BKO6441.jpg
-[2026-03-28T22:02:04.632Z] SKU: BKO6441 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652251779_BKO6441-2.jpg
-[2026-03-28T22:02:04.633Z] SKU: BKO6441 | BAŞARILI (Yeni)
-[2026-03-28T22:02:05.026Z] SKU: BYK2318 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:05.190Z] SKU: BYK2318 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652442236_BYK2318.jpg
-[2026-03-28T22:02:05.294Z] SKU: BYK2318 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652874165_BYK2318-2.jpg
-[2026-03-28T22:02:05.294Z] SKU: BYK2318 | BAŞARILI (Yeni)
-[2026-03-28T22:02:05.676Z] SKU: BYK2319 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:05.782Z] SKU: BYK2319 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652442328_BYK2319.jpg
-[2026-03-28T22:02:06.075Z] SKU: BYK2319 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1652874203_BYK2319-2.jpg
-[2026-03-28T22:02:06.075Z] SKU: BYK2319 | BAŞARILI (Yeni)
-[2026-03-28T22:02:06.439Z] SKU: BYK2341 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:06.542Z] SKU: BYK2341 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1653738652_BYK2341.jpg
-[2026-03-28T22:02:06.667Z] SKU: BYK2341 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1653738652_BYK2341-2.jpg
-[2026-03-28T22:02:06.668Z] SKU: BYK2341 | BAŞARILI (Yeni)
-[2026-03-28T22:02:07.079Z] SKU: BYK2342 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:07.182Z] SKU: BYK2342 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1653738704_BYK2342.jpg
-[2026-03-28T22:02:07.294Z] SKU: BYK2342 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1653738704_BYK2342-2.jpg
-[2026-03-28T22:02:07.295Z] SKU: BYK2342 | BAŞARILI (Yeni)
-[2026-03-28T22:02:07.965Z] SKU: BKO6569 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:08.077Z] SKU: BKO6569 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1656685864_bko6468.jpg
-[2026-03-28T22:02:08.078Z] SKU: BKO6569 | BAŞARILI (Yeni)
-[2026-03-28T22:02:08.665Z] SKU: BKP6727 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:08.793Z] SKU: BKP6727 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1725976929_kiraz1.jpg
-[2026-03-28T22:02:08.926Z] SKU: BKP6727 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1725976929_kiraz2.jpg
-[2026-03-28T22:02:09.059Z] SKU: BKP6727 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1662559050_BKP6727.jpg
-[2026-03-28T22:02:09.112Z] SKU: BKP6727 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1725976929_kiraz4.jpg
-[2026-03-28T22:02:09.113Z] SKU: BKP6727 | BAŞARILI (Yeni)
-[2026-03-28T22:02:09.296Z] SKU: BB4636 | HATA: Ikas HTTP Error 429: {"retryAfter":2.154,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:09.484Z] SKU: BKO6812 | HATA: Ikas HTTP Error 429: {"retryAfter":1.966,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:09.678Z] SKU: BKO6813 | HATA: Ikas HTTP Error 429: {"retryAfter":1.795,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.493Z","error":"Too Many Requests"}
-[2026-03-28T22:02:09.847Z] SKU: BKO6814 | HATA: Ikas HTTP Error 429: {"retryAfter":1.603,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.472Z","error":"Too Many Requests"}
-[2026-03-28T22:02:10.373Z] SKU: BKO6815 | HATA: Ikas HTTP Error 429: {"retryAfter":1.077,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:10.555Z] SKU: BKO6816 | HATA: Ikas HTTP Error 429: {"retryAfter":0.897,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:10.718Z] SKU: BKO6817 | HATA: Ikas HTTP Error 429: {"retryAfter":0.732,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:10.884Z] SKU: BKO6818 | HATA: Ikas HTTP Error 429: {"retryAfter":0.565,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:11.471Z","error":"Too Many Requests"}
-[2026-03-28T22:02:12.168Z] SKU: BYK2413 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:12.286Z] SKU: BYK2413 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1667550693_BYK2413.jpg
-[2026-03-28T22:02:12.287Z] SKU: BYK2413 | BAŞARILI (Yeni)
-[2026-03-28T22:02:12.673Z] SKU: BYK2414 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:12.860Z] SKU: BYK2414 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1667551048_BYK2414.jpg
-[2026-03-28T22:02:12.861Z] SKU: BYK2414 | BAŞARILI (Yeni)
-[2026-03-28T22:02:13.244Z] SKU: BB4681 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:13.446Z] SKU: BB4681 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1668509963_22.jpg
-[2026-03-28T22:02:13.619Z] SKU: BB4681 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1668509964_22-2.jpg
-[2026-03-28T22:02:13.620Z] SKU: BB4681 | BAŞARILI (Yeni)
-[2026-03-28T22:02:14.034Z] SKU: BKO6850 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:14.243Z] SKU: BKO6850 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1668779382_BKO6850.jpg
-[2026-03-28T22:02:14.360Z] SKU: BKO6850 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1668779381_BKO6850-2.jpg
-[2026-03-28T22:02:14.361Z] SKU: BKO6850 | BAŞARILI (Yeni)
-[2026-03-28T22:02:15.750Z] SKU: BKO6898 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:15.856Z] SKU: BKO6898 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1671719338_18.jpg
-[2026-03-28T22:02:15.982Z] SKU: BKO6898 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1671719338_18-2.jpg
-[2026-03-28T22:02:15.982Z] SKU: BKO6898 | BAŞARILI (Yeni)
-[2026-03-28T22:02:16.384Z] SKU: BB4748 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:16.569Z] SKU: BB4748 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1671721040_24.jpg
-[2026-03-28T22:02:16.708Z] SKU: BB4748 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1671721040_24-2.jpg
-[2026-03-28T22:02:16.709Z] SKU: BB4748 | BAŞARILI (Yeni)
-[2026-03-28T22:02:17.272Z] SKU: PR1103 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:17.407Z] SKU: PR1103 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673526309_PR1103.jpg
-[2026-03-28T22:02:17.407Z] SKU: PR1103 | BAŞARILI (Yeni)
-[2026-03-28T22:02:17.940Z] SKU: PR1112 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:18.065Z] SKU: PR1112 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673527489_PR1112.jpg
-[2026-03-28T22:02:18.065Z] SKU: PR1112 | BAŞARILI (Yeni)
-[2026-03-28T22:02:18.612Z] SKU: BKP6926 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:18.783Z] SKU: BKP6926 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673879146_BKP6926.jpg
-[2026-03-28T22:02:18.783Z] SKU: BKP6926 | BAŞARILI (Yeni)
-[2026-03-28T22:02:19.257Z] SKU: BKP6927 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:19.441Z] SKU: BKP6927 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673879228_BKP6927.jpg
-[2026-03-28T22:02:19.442Z] SKU: BKP6927 | BAŞARILI (Yeni)
-[2026-03-28T22:02:21.409Z] SKU: BKP6933 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:21.528Z] SKU: BKP6933 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673879682_BKP6933.jpg
-[2026-03-28T22:02:21.529Z] SKU: BKP6933 | BAŞARILI (Yeni)
-[2026-03-28T22:02:22.906Z] SKU: BKP6937 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:23.076Z] SKU: BKP6937 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673879880_BKP6937.jpg
-[2026-03-28T22:02:23.076Z] SKU: BKP6937 | BAŞARILI (Yeni)
-[2026-03-28T22:02:23.481Z] SKU: BKP6961 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:23.666Z] SKU: BKP6961 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1673881737_BKP6962.jpg
-[2026-03-28T22:02:23.666Z] SKU: BKP6961 | BAŞARILI (Yeni)
-[2026-03-28T22:02:24.108Z] SKU: BKO7041 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:24.324Z] SKU: BKO7041 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1677762368_BKO7041.jpg
-[2026-03-28T22:02:24.324Z] SKU: BKO7041 | BAŞARILI (Yeni)
-[2026-03-28T22:02:24.700Z] SKU: BKP7067 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:24.837Z] SKU: BKP7067 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1679389508_BKP7067.jpg
-[2026-03-28T22:02:24.837Z] SKU: BKP7067 | BAŞARILI (Yeni)
-[2026-03-28T22:02:25.233Z] SKU: BB5054 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:25.347Z] SKU: BB5054 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1680780696_BB5054.jpg
-[2026-03-28T22:02:25.348Z] SKU: BB5054 | BAŞARILI (Yeni)
-[2026-03-28T22:02:27.031Z] SKU: BKP7097 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:27.149Z] SKU: BKP7097 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1680792522_BKP7097.jpg
-[2026-03-28T22:02:27.149Z] SKU: BKP7097 | BAŞARILI (Yeni)
-[2026-03-28T22:02:27.526Z] SKU: BKP7103 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:27.705Z] SKU: BKP7103 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1680792906_BKP7103.jpg
-[2026-03-28T22:02:27.705Z] SKU: BKP7103 | BAŞARILI (Yeni)
-[2026-03-28T22:02:28.113Z] SKU: EBK1200 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:28.307Z] SKU: EBK1200 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1726224757_EBK1200-1.jpg
-[2026-03-28T22:02:28.426Z] SKU: EBK1200 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1726224757_EBK1200-2.jpg
-[2026-03-28T22:02:28.606Z] SKU: EBK1200 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1681133460_ebk1200-4-min.jpg
-[2026-03-28T22:02:28.742Z] SKU: EBK1200 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1726224758_EBK1200-3.jpg
-[2026-03-28T22:02:28.890Z] SKU: EBK1200 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1726224758_EBK1200-4.jpg
-[2026-03-28T22:02:28.891Z] SKU: EBK1200 | BAŞARILI (Yeni)
-[2026-03-28T22:02:29.423Z] SKU: BYK2568 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:29.541Z] SKU: BYK2568 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1681820779_BYK2568.jpg
-[2026-03-28T22:02:29.542Z] SKU: BYK2568 | BAŞARILI (Yeni)
-[2026-03-28T22:02:29.925Z] SKU: BYK2583 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:30.058Z] SKU: BYK2583 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1681821482_BYK2583.jpg
-[2026-03-28T22:02:30.058Z] SKU: BYK2583 | BAŞARILI (Yeni)
-[2026-03-28T22:02:30.440Z] SKU: BKO7152 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:31.151Z] SKU: BKO7152 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1681911140_BKO7152-2.jpg
-[2026-03-28T22:02:31.291Z] SKU: BKO7152 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1681911140_BKO7152.jpg
-[2026-03-28T22:02:31.291Z] SKU: BKO7152 | BAŞARILI (Yeni)
-[2026-03-28T22:02:31.456Z] SKU: BS3454 | HATA: Ikas HTTP Error 429: {"retryAfter":1.013,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.492Z","error":"Too Many Requests"}
-[2026-03-28T22:02:31.622Z] SKU: BS3455 | HATA: Ikas HTTP Error 429: {"retryAfter":0.848,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:31.781Z] SKU: HH1492 | HATA: Ikas HTTP Error 429: {"retryAfter":0.689,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:31.962Z] SKU: HH1493 | HATA: Ikas HTTP Error 429: {"retryAfter":0.507,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:32.124Z] SKU: HH1498 | HATA: Ikas HTTP Error 429: {"retryAfter":0.346,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:32.281Z] SKU: BB5142 | HATA: Ikas HTTP Error 429: {"retryAfter":0.188,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:32.456Z] SKU: BKP7195 | HATA: Ikas HTTP Error 429: {"retryAfter":0.014,"limit":50,"remaining":0,"reset":"2026-03-28T22:02:32.491Z","error":"Too Many Requests"}
-[2026-03-28T22:02:34.402Z] SKU: BB5152 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:34.576Z] SKU: BB5152 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1683205624_BB5152.jpg
-[2026-03-28T22:02:34.577Z] SKU: BB5152 | BAŞARILI (Yeni)
-[2026-03-28T22:02:35.001Z] SKU: BKP7235 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:36.431Z] SKU: BKP7235 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684228167_BKP7235.jpg
-[2026-03-28T22:02:36.432Z] SKU: BKP7235 | BAŞARILI (Yeni)
-[2026-03-28T22:02:36.929Z] SKU: BKP7236 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:37.129Z] SKU: BKP7236 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684228212_BKP7236.jpg
-[2026-03-28T22:02:37.129Z] SKU: BKP7236 | BAŞARILI (Yeni)
-[2026-03-28T22:02:39.007Z] SKU: BKP7237 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:39.192Z] SKU: BKP7237 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684228255_BKP7237.jpg
-[2026-03-28T22:02:39.192Z] SKU: BKP7237 | BAŞARILI (Yeni)
-[2026-03-28T22:02:39.562Z] SKU: BKP7238 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:39.962Z] SKU: BKP7238 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684228430_BKP7238.jpg
-[2026-03-28T22:02:39.962Z] SKU: BKP7238 | BAŞARILI (Yeni)
-[2026-03-28T22:02:40.391Z] SKU: BKP7239 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:40.554Z] SKU: BKP7239 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684228476_BKP7239.jpg
-[2026-03-28T22:02:40.555Z] SKU: BKP7239 | BAŞARILI (Yeni)
-[2026-03-28T22:02:40.926Z] SKU: BKP7284 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:41.040Z] SKU: BKP7284 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684760051_BKP7284.jpg
-[2026-03-28T22:02:41.040Z] SKU: BKP7284 | BAŞARILI (Yeni)
-[2026-03-28T22:02:41.411Z] SKU: EB3591 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:41.545Z] SKU: EB3591 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684923087_eb2.jpg
-[2026-03-28T22:02:41.721Z] SKU: EB3591 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684923087_eb2-2.jpg
-[2026-03-28T22:02:41.721Z] SKU: EB3591 | BAŞARILI (Yeni)
-[2026-03-28T22:02:42.171Z] SKU: EB3592 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:42.365Z] SKU: EB3592 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684923171_eb3.jpg
-[2026-03-28T22:02:43.095Z] SKU: EB3592 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1684923171_eb3-2.jpg
-[2026-03-28T22:02:43.096Z] SKU: EB3592 | BAŞARILI (Yeni)
-[2026-03-28T22:02:43.462Z] SKU: BKO7290 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:44.110Z] SKU: BKO7290 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685525588_BKO7290.jpg
-[2026-03-28T22:02:44.232Z] SKU: BKO7290 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685525588_BKO7290-2.jpg
-[2026-03-28T22:02:44.386Z] SKU: BKO7290 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685525587_BKO7290-3.jpg
-[2026-03-28T22:02:44.387Z] SKU: BKO7290 | BAŞARILI (Yeni)
-[2026-03-28T22:02:44.751Z] SKU: BKO7291 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:44.859Z] SKU: BKO7291 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685533222_bko7291-2.jpg
-[2026-03-28T22:02:44.972Z] SKU: BKO7291 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685525678_BKO7291.jpg
-[2026-03-28T22:02:45.089Z] SKU: BKO7291 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685525677_BKO7291-3.jpg
-[2026-03-28T22:02:45.089Z] SKU: BKO7291 | BAŞARILI (Yeni)
-[2026-03-28T22:02:45.465Z] SKU: BKP7348 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:45.572Z] SKU: BKP7348 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685693450_BKP7348.jpg
-[2026-03-28T22:02:45.573Z] SKU: BKP7348 | BAŞARILI (Yeni)
-[2026-03-28T22:02:45.939Z] SKU: BKP7358 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:46.091Z] SKU: BKP7358 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685695000_BKP7358.jpg
-[2026-03-28T22:02:46.091Z] SKU: BKP7358 | BAŞARILI (Yeni)
-[2026-03-28T22:02:46.507Z] SKU: BB5249 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:46.623Z] SKU: BB5249 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1685960716_BB5249.jpg
-[2026-03-28T22:02:46.624Z] SKU: BB5249 | BAŞARILI (Yeni)
-[2026-03-28T22:02:46.988Z] SKU: BYK2600 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:47.116Z] SKU: BYK2600 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1686575830_BYK2599.jpg
-[2026-03-28T22:02:47.116Z] SKU: BYK2600 | BAŞARILI (Yeni)
-[2026-03-28T22:02:47.746Z] SKU: BYK2601 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:47.972Z] SKU: BYK2601 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1686575886_BYK2600.jpg
-[2026-03-28T22:02:47.972Z] SKU: BYK2601 | BAŞARILI (Yeni)
-[2026-03-28T22:02:49.302Z] SKU: BYK2617 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:49.431Z] SKU: BYK2617 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1687266259_BYK2617.jpg
-[2026-03-28T22:02:49.544Z] SKU: BYK2617 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1687266259_BYK2617-2.jpg
-[2026-03-28T22:02:49.545Z] SKU: BYK2617 | BAŞARILI (Yeni)
-[2026-03-28T22:02:49.907Z] SKU: BYK2631 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:50.049Z] SKU: BYK2631 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1687267562_BYK2631.jpg
-[2026-03-28T22:02:50.837Z] SKU: BYK2631 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1687267562_BYK2631-2.jpg
-[2026-03-28T22:02:50.837Z] SKU: BYK2631 | BAŞARILI (Yeni)
-[2026-03-28T22:02:51.893Z] SKU: BKO7389 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:52.039Z] SKU: BKO7389 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718550_BKO7374.jpg
-[2026-03-28T22:02:52.142Z] SKU: BKO7389 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718550_BKO7374-2-.jpg
-[2026-03-28T22:02:52.702Z] SKU: BKO7389 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718550_BKO7374-3.jpg
-[2026-03-28T22:02:52.702Z] SKU: BKO7389 | BAŞARILI (Yeni)
-[2026-03-28T22:02:54.358Z] SKU: BKO7390 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:54.477Z] SKU: BKO7390 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718612_BKO7375.jpg
-[2026-03-28T22:02:54.579Z] SKU: BKO7390 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718611_BKO7375-2.jpg
-[2026-03-28T22:02:54.697Z] SKU: BKO7390 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688718612_BKO7375-3.jpg
-[2026-03-28T22:02:54.698Z] SKU: BKO7390 | BAŞARILI (Yeni)
-[2026-03-28T22:02:55.173Z] SKU: BKO7391 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:55.283Z] SKU: BKO7391 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688719402_BKO7376.jpg
-[2026-03-28T22:02:55.428Z] SKU: BKO7391 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688719402_BKO7376-2.jpg
-[2026-03-28T22:02:55.429Z] SKU: BKO7391 | BAŞARILI (Yeni)
-[2026-03-28T22:02:56.135Z] SKU: BYK2654 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:56.246Z] SKU: BYK2654 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688725617_BYK2654.jpg
-[2026-03-28T22:02:56.396Z] SKU: BYK2654 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688725617_BYK2654-3.jpg
-[2026-03-28T22:02:56.396Z] SKU: BYK2654 | BAŞARILI (Yeni)
-[2026-03-28T22:02:56.816Z] SKU: BYK2655 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:57.512Z] SKU: BYK2655 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688725729_BYK2655.jpg
-[2026-03-28T22:02:57.612Z] SKU: BYK2655 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688725728_BYK2655-2.jpg
-[2026-03-28T22:02:57.719Z] SKU: BYK2655 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688725728_BYK2655-3.jpg
-[2026-03-28T22:02:57.719Z] SKU: BYK2655 | BAŞARILI (Yeni)
-[2026-03-28T22:02:58.091Z] SKU: BYK2665 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:58.201Z] SKU: BYK2665 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688728795_BYK2665.jpg
-[2026-03-28T22:02:58.358Z] SKU: BYK2665 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688728795_BYK2665-3.jpg
-[2026-03-28T22:02:58.464Z] SKU: BYK2665 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688728795_BYK2665-2.jpg
-[2026-03-28T22:02:58.465Z] SKU: BYK2665 | BAŞARILI (Yeni)
-[2026-03-28T22:02:58.835Z] SKU: BB5285 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:58.953Z] SKU: BB5285 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688733441_BB5285.jpg
-[2026-03-28T22:02:59.058Z] SKU: BB5285 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1688733441_BB5285-2.jpg
-[2026-03-28T22:02:59.058Z] SKU: BB5285 | BAŞARILI (Yeni)
-[2026-03-28T22:02:59.446Z] SKU: BKO7411 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:02:59.575Z] SKU: BKO7411 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1689062030_BKO7411.jpg
-[2026-03-28T22:02:59.699Z] SKU: BKO7411 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1689062030_BKO7411-2.jpg
-[2026-03-28T22:02:59.700Z] SKU: BKO7411 | BAŞARILI (Yeni)
-[2026-03-28T22:03:00.058Z] SKU: BYK2706 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:00.177Z] SKU: BYK2706 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690275874_BYK2706.jpg
-[2026-03-28T22:03:00.177Z] SKU: BYK2706 | BAŞARILI (Yeni)
-[2026-03-28T22:03:01.044Z] SKU: BKO7427 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:01.184Z] SKU: BKO7427 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690280798_BKO7427.jpg
-[2026-03-28T22:03:01.392Z] SKU: BKO7427 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690280798_BKO7427-2.jpg
-[2026-03-28T22:03:01.392Z] SKU: BKO7427 | BAŞARILI (Yeni)
-[2026-03-28T22:03:01.837Z] SKU: BKP7477 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:01.891Z] SKU: BKP7477 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690292199_BKP7477.jpg
-[2026-03-28T22:03:01.891Z] SKU: BKP7477 | BAŞARILI (Yeni)
-[2026-03-28T22:03:02.069Z] SKU: BKP7482 | HATA: Ikas HTTP Error 429: {"retryAfter":1.292,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.382Z","error":"Too Many Requests"}
-[2026-03-28T22:03:02.242Z] SKU: BKO7451 | HATA: Ikas HTTP Error 429: {"retryAfter":1.118,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.381Z","error":"Too Many Requests"}
-[2026-03-28T22:03:02.432Z] SKU: BKO7459 | HATA: Ikas HTTP Error 429: {"retryAfter":0.928,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.382Z","error":"Too Many Requests"}
-[2026-03-28T22:03:02.604Z] SKU: BYK2712 | HATA: Ikas HTTP Error 429: {"retryAfter":0.755,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.381Z","error":"Too Many Requests"}
-[2026-03-28T22:03:02.769Z] SKU: BYK2715 | HATA: Ikas HTTP Error 429: {"retryAfter":0.591,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.381Z","error":"Too Many Requests"}
-[2026-03-28T22:03:02.930Z] SKU: BKP7500 | HATA: Ikas HTTP Error 429: {"retryAfter":0.43,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.382Z","error":"Too Many Requests"}
-[2026-03-28T22:03:03.094Z] SKU: BKP7501 | HATA: Ikas HTTP Error 429: {"retryAfter":0.266,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.381Z","error":"Too Many Requests"}
-[2026-03-28T22:03:03.257Z] SKU: BKP7504 | HATA: Ikas HTTP Error 429: {"retryAfter":0.103,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:03.382Z","error":"Too Many Requests"}
-[2026-03-28T22:03:04.000Z] SKU: BKP7525 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:04.181Z] SKU: BKP7525 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690881398_BKP7525.jpg
-[2026-03-28T22:03:04.182Z] SKU: BKP7525 | BAŞARILI (Yeni)
-[2026-03-28T22:03:05.045Z] SKU: BKP7527 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:05.179Z] SKU: BKP7527 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690881627_BKP7527.jpg
-[2026-03-28T22:03:05.180Z] SKU: BKP7527 | BAŞARILI (Yeni)
-[2026-03-28T22:03:05.563Z] SKU: BKP7528 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:05.728Z] SKU: BKP7528 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690881736_BKP7528.jpg
-[2026-03-28T22:03:05.729Z] SKU: BKP7528 | BAŞARILI (Yeni)
-[2026-03-28T22:03:06.126Z] SKU: BKO7472 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:06.280Z] SKU: BKO7472 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690982950_BKO7472.jpg
-[2026-03-28T22:03:06.447Z] SKU: BKO7472 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1690982949_BKO7472-2.jpg
-[2026-03-28T22:03:06.448Z] SKU: BKO7472 | BAŞARILI (Yeni)
-[2026-03-28T22:03:08.081Z] SKU: BKP7539 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:08.238Z] SKU: BKP7539 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691064272_BKP7539.jpg
-[2026-03-28T22:03:08.239Z] SKU: BKP7539 | BAŞARILI (Yeni)
-[2026-03-28T22:03:08.637Z] SKU: BKP7556 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:08.830Z] SKU: BKP7556 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691067556_BKP7556.jpg
-[2026-03-28T22:03:08.831Z] SKU: BKP7556 | BAŞARILI (Yeni)
-[2026-03-28T22:03:09.430Z] SKU: ERK1320 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:09.538Z] SKU: ERK1320 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069629_ERK1320.jpg
-[2026-03-28T22:03:09.653Z] SKU: ERK1320 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069629_ERK1320-2.jpg
-[2026-03-28T22:03:09.654Z] SKU: ERK1320 | BAŞARILI (Yeni)
-[2026-03-28T22:03:10.062Z] SKU: ERK1321 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:10.191Z] SKU: ERK1321 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069738_ERK1321.jpg
-[2026-03-28T22:03:10.340Z] SKU: ERK1321 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069738_ERK1321-2.jpg
-[2026-03-28T22:03:10.340Z] SKU: ERK1321 | BAŞARILI (Yeni)
-[2026-03-28T22:03:10.722Z] SKU: ERK1322 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:10.848Z] SKU: ERK1322 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069779_ERK1322.jpg
-[2026-03-28T22:03:10.971Z] SKU: ERK1322 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069779_ERK1322-2.jpg
-[2026-03-28T22:03:10.972Z] SKU: ERK1322 | BAŞARILI (Yeni)
-[2026-03-28T22:03:12.840Z] SKU: ERK1323 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:12.986Z] SKU: ERK1323 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069856_ERK1323.jpg
-[2026-03-28T22:03:13.111Z] SKU: ERK1323 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691069856_ERK1323-2.jpg
-[2026-03-28T22:03:13.111Z] SKU: ERK1323 | BAŞARILI (Yeni)
-[2026-03-28T22:03:14.140Z] SKU: BB5360 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:14.271Z] SKU: BB5360 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691146367_EB5360.jpg
-[2026-03-28T22:03:14.272Z] SKU: BB5360 | BAŞARILI (Yeni)
-[2026-03-28T22:03:14.646Z] SKU: BB5361 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:14.771Z] SKU: BB5361 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691146406_EB5361.jpg
-[2026-03-28T22:03:14.771Z] SKU: BB5361 | BAŞARILI (Yeni)
-[2026-03-28T22:03:15.236Z] SKU: BYK2725 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:15.392Z] SKU: BYK2725 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1691502714_BYK2725.jpg
-[2026-03-28T22:03:15.392Z] SKU: BYK2725 | BAŞARILI (Yeni)
-[2026-03-28T22:03:17.241Z] SKU: BKP7569 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:17.414Z] SKU: BKP7569 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1692258241_BKP7569.jpg
-[2026-03-28T22:03:17.415Z] SKU: BKP7569 | BAŞARILI (Yeni)
-[2026-03-28T22:03:17.839Z] SKU: BYK2741 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:18.811Z] SKU: BYK2741 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1692974706_BYK2741.jpg
-[2026-03-28T22:03:18.812Z] SKU: BYK2741 | BAŞARILI (Yeni)
-[2026-03-28T22:03:19.170Z] SKU: BYK2748 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:19.277Z] SKU: BYK2748 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1692975050_BYK2748.jpg
-[2026-03-28T22:03:19.277Z] SKU: BYK2748 | BAŞARILI (Yeni)
-[2026-03-28T22:03:20.237Z] SKU: BKP7680 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:20.661Z] SKU: BKP7680 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693398648_BKP7680.jpg
-[2026-03-28T22:03:20.662Z] SKU: BKP7680 | BAŞARILI (Yeni)
-[2026-03-28T22:03:21.139Z] SKU: BKO7566 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:21.264Z] SKU: BKO7566 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693836373_BKO7566.jpg
-[2026-03-28T22:03:21.380Z] SKU: BKO7566 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693836373_BKO7566-2.jpg
-[2026-03-28T22:03:21.380Z] SKU: BKO7566 | BAŞARILI (Yeni)
-[2026-03-28T22:03:21.736Z] SKU: BKO7567 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:21.949Z] SKU: BKO7567 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693836417_BKO7567.jpg
-[2026-03-28T22:03:22.154Z] SKU: BKO7567 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693836418_BKO7567-2.jpg
-[2026-03-28T22:03:22.154Z] SKU: BKO7567 | BAŞARILI (Yeni)
-[2026-03-28T22:03:22.534Z] SKU: BKO7578 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:22.661Z] SKU: BKO7578 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693837113_BKO7578.jpg
-[2026-03-28T22:03:22.785Z] SKU: BKO7578 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693837114_BKO7578-2.jpg
-[2026-03-28T22:03:22.786Z] SKU: BKO7578 | BAŞARILI (Yeni)
-[2026-03-28T22:03:23.149Z] SKU: BKO7588 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:23.271Z] SKU: BKO7588 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693838104_BKO7588.jpg
-[2026-03-28T22:03:23.407Z] SKU: BKO7588 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693838104_BKO7588-2.jpg
-[2026-03-28T22:03:23.407Z] SKU: BKO7588 | BAŞARILI (Yeni)
-[2026-03-28T22:03:23.802Z] SKU: BKP7702 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:23.930Z] SKU: BKP7702 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693905595_BKP7702.jpg
-[2026-03-28T22:03:23.930Z] SKU: BKP7702 | BAŞARILI (Yeni)
-[2026-03-28T22:03:24.387Z] SKU: BKP7703 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:24.512Z] SKU: BKP7703 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693905646_BKP7703.jpg
-[2026-03-28T22:03:24.512Z] SKU: BKP7703 | BAŞARILI (Yeni)
-[2026-03-28T22:03:24.909Z] SKU: BYK2765 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:25.020Z] SKU: BYK2765 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693917094_BYK2765.jpg
-[2026-03-28T22:03:25.196Z] SKU: BYK2765 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1693917094_BYK2765-2.jpg
-[2026-03-28T22:03:25.197Z] SKU: BYK2765 | BAŞARILI (Yeni)
-[2026-03-28T22:03:25.554Z] SKU: BKO7614 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:25.685Z] SKU: BKO7614 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695134705_BKO7614.jpg
-[2026-03-28T22:03:25.796Z] SKU: BKO7614 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695134705_BKO7614-2.jpg
-[2026-03-28T22:03:25.796Z] SKU: BKO7614 | BAŞARILI (Yeni)
-[2026-03-28T22:03:26.172Z] SKU: BKO7620 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:26.282Z] SKU: BKO7620 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135129_BKO7620.jpg
-[2026-03-28T22:03:26.536Z] SKU: BKO7620 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135129_BKO7620-2.jpg
-[2026-03-28T22:03:26.537Z] SKU: BKO7620 | BAŞARILI (Yeni)
-[2026-03-28T22:03:27.198Z] SKU: BKO7626 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:27.314Z] SKU: BKO7626 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135424_BKO7626.jpg
-[2026-03-28T22:03:27.484Z] SKU: BKO7626 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135424_BKO7626-2.jpg
-[2026-03-28T22:03:27.485Z] SKU: BKO7626 | BAŞARILI (Yeni)
-[2026-03-28T22:03:27.884Z] SKU: BKO7627 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:27.992Z] SKU: BKO7627 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135473_BKO7627.jpg
-[2026-03-28T22:03:28.108Z] SKU: BKO7627 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135473_BKO7627-2.jpg
-[2026-03-28T22:03:28.108Z] SKU: BKO7627 | BAŞARILI (Yeni)
-[2026-03-28T22:03:28.473Z] SKU: BKO7634 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:28.591Z] SKU: BKO7634 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135961_BKO7634.jpg
-[2026-03-28T22:03:28.716Z] SKU: BKO7634 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695135961_BKO7634-2.jpg
-[2026-03-28T22:03:28.716Z] SKU: BKO7634 | BAŞARILI (Yeni)
-[2026-03-28T22:03:29.314Z] SKU: BKO7635 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:29.453Z] SKU: BKO7635 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695136024_BKO7635.jpg
-[2026-03-28T22:03:29.699Z] SKU: BKO7635 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695136024_BKO7635-2.jpg
-[2026-03-28T22:03:29.700Z] SKU: BKO7635 | BAŞARILI (Yeni)
-[2026-03-28T22:03:30.098Z] SKU: BB5438 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:30.273Z] SKU: BB5438 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695202353_BB5438.jpg
-[2026-03-28T22:03:30.274Z] SKU: BB5438 | BAŞARILI (Yeni)
-[2026-03-28T22:03:30.720Z] SKU: BB5452 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:30.946Z] SKU: BB5452 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1695204341_BB5452.jpg
-[2026-03-28T22:03:30.946Z] SKU: BB5452 | BAŞARILI (Yeni)
-[2026-03-28T22:03:31.113Z] SKU: BB5453 | HATA: Ikas HTTP Error 429: {"retryAfter":2.626,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:31.290Z] SKU: BB5457 | HATA: Ikas HTTP Error 429: {"retryAfter":2.448,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:31.448Z] SKU: BKP7765 | HATA: Ikas HTTP Error 429: {"retryAfter":2.29,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:31.707Z] SKU: BKO7676 | HATA: Ikas HTTP Error 429: {"retryAfter":2.031,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:31.876Z] SKU: BKP7855 | HATA: Ikas HTTP Error 429: {"retryAfter":1.871,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.761Z","error":"Too Many Requests"}
-[2026-03-28T22:03:32.595Z] SKU: BKP7856 | HATA: Ikas HTTP Error 429: {"retryAfter":1.143,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:32.775Z] SKU: BKO7688 | HATA: Ikas HTTP Error 429: {"retryAfter":0.964,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:32.977Z] SKU: BKO7689 | HATA: Ikas HTTP Error 429: {"retryAfter":0.763,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:33.149Z] SKU: BKO7700 | HATA: Ikas HTTP Error 429: {"retryAfter":0.589,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:33.760Z","error":"Too Many Requests"}
-[2026-03-28T22:03:35.095Z] SKU: BKP7885 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:35.251Z] SKU: BKP7885 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697178518_BKP7885.jpg
-[2026-03-28T22:03:35.252Z] SKU: BKP7885 | BAŞARILI (Yeni)
-[2026-03-28T22:03:36.317Z] SKU: BKP7886 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:36.531Z] SKU: BKP7886 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697178651_BKP7886.jpg
-[2026-03-28T22:03:36.532Z] SKU: BKP7886 | BAŞARILI (Yeni)
-[2026-03-28T22:03:36.901Z] SKU: BKP7891 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:37.073Z] SKU: BKP7891 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697179246_BKP7891.jpg
-[2026-03-28T22:03:37.073Z] SKU: BKP7891 | BAŞARILI (Yeni)
-[2026-03-28T22:03:37.826Z] SKU: BKP7892 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:38.010Z] SKU: BKP7892 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697179339_BKP7892.jpg
-[2026-03-28T22:03:38.010Z] SKU: BKP7892 | BAŞARILI (Yeni)
-[2026-03-28T22:03:38.399Z] SKU: BKP7893 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:38.631Z] SKU: BKP7893 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697179402_BKP7893.jpg
-[2026-03-28T22:03:38.632Z] SKU: BKP7893 | BAŞARILI (Yeni)
-[2026-03-28T22:03:39.050Z] SKU: BKP7894 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:39.163Z] SKU: BKP7894 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697179472_BKP7894.jpg
-[2026-03-28T22:03:39.163Z] SKU: BKP7894 | BAŞARILI (Yeni)
-[2026-03-28T22:03:39.537Z] SKU: BB5541 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:39.676Z] SKU: BB5541 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1697718671_BB5541.jpg
-[2026-03-28T22:03:39.676Z] SKU: BB5541 | BAŞARILI (Yeni)
-[2026-03-28T22:03:40.056Z] SKU: BKO7747 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:40.186Z] SKU: BKO7747 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698234635_BKO7747.jpg
-[2026-03-28T22:03:40.313Z] SKU: BKO7747 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698234635_BKO7747-2.jpg
-[2026-03-28T22:03:40.314Z] SKU: BKO7747 | BAŞARILI (Yeni)
-[2026-03-28T22:03:40.709Z] SKU: BKP7922 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:40.821Z] SKU: BKP7922 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698931025_BKP7922.jpg
-[2026-03-28T22:03:40.822Z] SKU: BKP7922 | BAŞARILI (Yeni)
-[2026-03-28T22:03:41.193Z] SKU: BKP7929 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:41.302Z] SKU: BKP7929 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698931916_BKP7929.jpg
-[2026-03-28T22:03:41.303Z] SKU: BKP7929 | BAŞARILI (Yeni)
-[2026-03-28T22:03:41.670Z] SKU: BKP7934 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:41.928Z] SKU: BKP7934 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698932228_BKP7934.jpg
-[2026-03-28T22:03:41.929Z] SKU: BKP7934 | BAŞARILI (Yeni)
-[2026-03-28T22:03:42.537Z] SKU: BKP7940 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:42.652Z] SKU: BKP7940 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1698934509_BKP7940.jpg
-[2026-03-28T22:03:42.652Z] SKU: BKP7940 | BAŞARILI (Yeni)
-[2026-03-28T22:03:42.863Z] SKU: BKP7950 | HATA: Ikas HTTP Error 429: {"retryAfter":1.717,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:43.098Z] SKU: BKP7951 | HATA: Ikas HTTP Error 429: {"retryAfter":1.481,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:43.263Z] SKU: BKP7964 | HATA: Ikas HTTP Error 429: {"retryAfter":1.316,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:43.601Z] SKU: BKP7979 | HATA: Ikas HTTP Error 429: {"retryAfter":0.983,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.603Z","error":"Too Many Requests"}
-[2026-03-28T22:03:43.772Z] SKU: BKP7984 | HATA: Ikas HTTP Error 429: {"retryAfter":0.807,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:43.973Z] SKU: BKP7992 | HATA: Ikas HTTP Error 429: {"retryAfter":0.607,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:44.154Z] SKU: BB5584 | HATA: Ikas HTTP Error 429: {"retryAfter":0.425,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:44.330Z] SKU: BKO7789 | HATA: Ikas HTTP Error 429: {"retryAfter":0.249,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:44.491Z] SKU: BKP8000 | HATA: Ikas HTTP Error 429: {"retryAfter":0.088,"limit":50,"remaining":0,"reset":"2026-03-28T22:03:44.600Z","error":"Too Many Requests"}
-[2026-03-28T22:03:44.865Z] SKU: BKP8027 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:45.021Z] SKU: BKP8027 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1699620477_BKP8027.jpg
-[2026-03-28T22:03:45.021Z] SKU: BKP8027 | BAŞARILI (Yeni)
-[2026-03-28T22:03:45.402Z] SKU: BKP8044 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:45.574Z] SKU: BKP8044 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1699972616_BKP8044.jpg
-[2026-03-28T22:03:45.574Z] SKU: BKP8044 | BAŞARILI (Yeni)
-[2026-03-28T22:03:45.940Z] SKU: BKP8059 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:46.255Z] SKU: BKP8059 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1699974705_BKP8059.jpg
-[2026-03-28T22:03:46.256Z] SKU: BKP8059 | BAŞARILI (Yeni)
-[2026-03-28T22:03:47.095Z] SKU: BKP8060 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:47.364Z] SKU: BKP8060 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1699974770_BKP8060.jpg
-[2026-03-28T22:03:47.364Z] SKU: BKP8060 | BAŞARILI (Yeni)
-[2026-03-28T22:03:47.737Z] SKU: BKO7811 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:47.859Z] SKU: BKO7811 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700035027_BKO7811.jpg
-[2026-03-28T22:03:47.980Z] SKU: BKO7811 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700035027_BKO7811-2.jpg
-[2026-03-28T22:03:47.980Z] SKU: BKO7811 | BAŞARILI (Yeni)
-[2026-03-28T22:03:48.336Z] SKU: BYK2815 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:48.517Z] SKU: BYK2815 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700057133_BYK2815.jpg
-[2026-03-28T22:03:48.517Z] SKU: BYK2815 | BAŞARILI (Yeni)
-[2026-03-28T22:03:50.965Z] SKU: EB3596 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:51.092Z] SKU: EB3596 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700057677_EB3596.jpg
-[2026-03-28T22:03:51.093Z] SKU: EB3596 | BAŞARILI (Yeni)
-[2026-03-28T22:03:51.641Z] SKU: EB3599 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:51.755Z] SKU: EB3599 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700058047_EB3599.jpg
-[2026-03-28T22:03:51.756Z] SKU: EB3599 | BAŞARILI (Yeni)
-[2026-03-28T22:03:52.100Z] SKU: EB3602 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:52.323Z] SKU: EB3602 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700058345_EB3602.jpg
-[2026-03-28T22:03:52.323Z] SKU: EB3602 | BAŞARILI (Yeni)
-[2026-03-28T22:03:52.667Z] SKU: EB3603 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:52.786Z] SKU: EB3603 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700058391_EB3603.jpg
-[2026-03-28T22:03:52.787Z] SKU: EB3603 | BAŞARILI (Yeni)
-[2026-03-28T22:03:53.177Z] SKU: BKO7820 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:53.405Z] SKU: BKO7820 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700315940_BKO7820.jpg
-[2026-03-28T22:03:53.563Z] SKU: BKO7820 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700315940_BKO7820-2.jpg
-[2026-03-28T22:03:53.564Z] SKU: BKO7820 | BAŞARILI (Yeni)
-[2026-03-28T22:03:53.938Z] SKU: BKO7823 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:55.266Z] SKU: BKO7823 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700316191_BKO7823.jpg
-[2026-03-28T22:03:55.383Z] SKU: BKO7823 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700316191_BKO7823-2.jpg
-[2026-03-28T22:03:55.492Z] SKU: BKO7823 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705766335_img_1968_out.jpg
-[2026-03-28T22:03:55.492Z] SKU: BKO7823 | BAŞARILI (Yeni)
-[2026-03-28T22:03:55.848Z] SKU: BKO7824 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:55.968Z] SKU: BKO7824 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700316249_BKO7824.jpg
-[2026-03-28T22:03:56.092Z] SKU: BKO7824 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700316249_BKO7824-2.jpg
-[2026-03-28T22:03:56.092Z] SKU: BKO7824 | BAŞARILI (Yeni)
-[2026-03-28T22:03:56.447Z] SKU: BKP8075 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:56.614Z] SKU: BKP8075 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700567650_BKP8075.jpg
-[2026-03-28T22:03:56.615Z] SKU: BKP8075 | BAŞARILI (Yeni)
-[2026-03-28T22:03:56.962Z] SKU: BKP8081 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:57.132Z] SKU: BKP8081 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700568305_BKP8081.jpg
-[2026-03-28T22:03:57.132Z] SKU: BKP8081 | BAŞARILI (Yeni)
-[2026-03-28T22:03:57.498Z] SKU: BKP8083 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:57.632Z] SKU: BKP8083 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700568536_BKP8083.jpg
-[2026-03-28T22:03:57.633Z] SKU: BKP8083 | BAŞARILI (Yeni)
-[2026-03-28T22:03:57.997Z] SKU: BKP8084 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:58.129Z] SKU: BKP8084 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700568582_BKP8084.jpg
-[2026-03-28T22:03:58.129Z] SKU: BKP8084 | BAŞARILI (Yeni)
-[2026-03-28T22:03:59.393Z] SKU: BKP8088 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:03:59.546Z] SKU: BKP8088 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700569043_BKP8088.jpg
-[2026-03-28T22:03:59.546Z] SKU: BKP8088 | BAŞARILI (Yeni)
-[2026-03-28T22:03:59.959Z] SKU: BKO7870 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:00.084Z] SKU: BKO7870 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700901897_BKO7870.jpg
-[2026-03-28T22:04:00.210Z] SKU: BKO7870 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700901897_BKO7870-2.jpg
-[2026-03-28T22:04:00.210Z] SKU: BKO7870 | BAŞARILI (Yeni)
-[2026-03-28T22:04:00.579Z] SKU: BB5632 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:00.691Z] SKU: BB5632 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700904156_BB5632.jpg
-[2026-03-28T22:04:00.691Z] SKU: BB5632 | BAŞARILI (Yeni)
-[2026-03-28T22:04:01.193Z] SKU: BB5643 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:01.305Z] SKU: BB5643 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1700904924_BB5643.jpg
-[2026-03-28T22:04:01.305Z] SKU: BB5643 | BAŞARILI (Yeni)
-[2026-03-28T22:04:02.838Z] SKU: BKP8120 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:02.955Z] SKU: BKP8120 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1701259867_BKP8120.jpg
-[2026-03-28T22:04:02.956Z] SKU: BKP8120 | BAŞARILI (Yeni)
-[2026-03-28T22:04:03.367Z] SKU: BKO7887 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:03.534Z] SKU: BKO7887 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1701261201_BKO7887.jpg
-[2026-03-28T22:04:03.666Z] SKU: BKO7887 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1701261201_BKO7887-2.jpg
-[2026-03-28T22:04:03.667Z] SKU: BKO7887 | BAŞARILI (Yeni)
-[2026-03-28T22:04:03.842Z] SKU: BYK2851 | HATA: Ikas HTTP Error 429: {"retryAfter":1.277,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.140Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.010Z] SKU: BYK2852 | HATA: Ikas HTTP Error 429: {"retryAfter":1.109,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.141Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.168Z] SKU: BYK2854 | HATA: Ikas HTTP Error 429: {"retryAfter":0.95,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.140Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.325Z] SKU: BKO7896 | HATA: Ikas HTTP Error 429: {"retryAfter":0.793,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.140Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.484Z] SKU: BKP8133 | HATA: Ikas HTTP Error 429: {"retryAfter":0.635,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.140Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.641Z] SKU: BKO7944 | HATA: Ikas HTTP Error 429: {"retryAfter":0.478,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.140Z","error":"Too Many Requests"}
-[2026-03-28T22:04:04.815Z] SKU: BKO7946 | HATA: Ikas HTTP Error 429: {"retryAfter":0.305,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:05.141Z","error":"Too Many Requests"}
-[2026-03-28T22:04:06.611Z] SKU: BKO7955 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:06.792Z] SKU: BKO7955 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702305569_BKO7955.jpg
-[2026-03-28T22:04:07.059Z] SKU: BKO7955 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702305569_BKO7955-2.jpg
-[2026-03-28T22:04:07.060Z] SKU: BKO7955 | BAŞARILI (Yeni)
-[2026-03-28T22:04:07.554Z] SKU: BKO7972 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:07.783Z] SKU: BKO7972 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702475401_BKO7972.jpg
-[2026-03-28T22:04:07.905Z] SKU: BKO7972 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702475401_BKO7972-2.jpg
-[2026-03-28T22:04:07.906Z] SKU: BKO7972 | BAŞARILI (Yeni)
-[2026-03-28T22:04:08.655Z] SKU: BB5667 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:08.829Z] SKU: BB5667 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702555667_BB5666.jpg
-[2026-03-28T22:04:08.829Z] SKU: BB5667 | BAŞARILI (Yeni)
-[2026-03-28T22:04:09.187Z] SKU: BKP8142 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:11.499Z] SKU: BKP8142 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702563105_BKP8142.jpg
-[2026-03-28T22:04:11.499Z] SKU: BKP8142 | BAŞARILI (Yeni)
-[2026-03-28T22:04:11.911Z] SKU: BKP8146 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:12.049Z] SKU: BKP8146 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702563292_BKP8146.jpg
-[2026-03-28T22:04:12.049Z] SKU: BKP8146 | BAŞARILI (Yeni)
-[2026-03-28T22:04:12.457Z] SKU: BYK2859 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:12.626Z] SKU: BYK2859 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702560495_BYK2859.jpg
-[2026-03-28T22:04:12.626Z] SKU: BYK2859 | BAŞARILI (Yeni)
-[2026-03-28T22:04:13.198Z] SKU: BKO7999 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:13.400Z] SKU: BKO7999 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702656304_BKO7999.jpg
-[2026-03-28T22:04:13.680Z] SKU: BKO7999 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702656303_BKO7999-2.jpg
-[2026-03-28T22:04:13.681Z] SKU: BKO7999 | BAŞARILI (Yeni)
-[2026-03-28T22:04:14.184Z] SKU: BKO8005 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:14.338Z] SKU: BKO8005 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702656764_BKO8005.jpg
-[2026-03-28T22:04:14.446Z] SKU: BKO8005 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1702656764_BKO8005-2.jpg
-[2026-03-28T22:04:14.446Z] SKU: BKO8005 | BAŞARILI (Yeni)
-[2026-03-28T22:04:14.908Z] SKU: BKO8016 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:15.096Z] SKU: BKO8016 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703160568_BKO8016.jpg
-[2026-03-28T22:04:15.230Z] SKU: BKO8016 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703160568_BKO8016-2.jpg
-[2026-03-28T22:04:15.231Z] SKU: BKO8016 | BAŞARILI (Yeni)
-[2026-03-28T22:04:15.608Z] SKU: BKO8029 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:15.725Z] SKU: BKO8029 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703161921_BKO8029.jpg
-[2026-03-28T22:04:15.891Z] SKU: BKO8029 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703161921_BKO8029-2.jpg
-[2026-03-28T22:04:15.892Z] SKU: BKO8029 | BAŞARILI (Yeni)
-[2026-03-28T22:04:16.242Z] SKU: BKO8033 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:16.359Z] SKU: BKO8033 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703162264_BKO8033.jpg
-[2026-03-28T22:04:16.908Z] SKU: BKO8033 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703162263_BKO8033-2.jpg
-[2026-03-28T22:04:17.009Z] SKU: BKO8033 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704802974_image_picker8851872107541920300_out.jpg
-[2026-03-28T22:04:17.009Z] SKU: BKO8033 | BAŞARILI (Yeni)
-[2026-03-28T22:04:17.377Z] SKU: BKO8040 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:17.499Z] SKU: BKO8040 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703162851_BKO8040.jpg
-[2026-03-28T22:04:17.605Z] SKU: BKO8040 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703162851_BKO8040-2.jpg
-[2026-03-28T22:04:17.606Z] SKU: BKO8040 | BAŞARILI (Yeni)
-[2026-03-28T22:04:18.368Z] SKU: BKP8217 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:18.564Z] SKU: BKP8217 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703850184_BKP8217.jpg
-[2026-03-28T22:04:18.565Z] SKU: BKP8217 | BAŞARILI (Yeni)
-[2026-03-28T22:04:18.968Z] SKU: BYK2894 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:19.082Z] SKU: BYK2894 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703861897_BYK2894.jpg
-[2026-03-28T22:04:19.083Z] SKU: BYK2894 | BAŞARILI (Yeni)
-[2026-03-28T22:04:19.560Z] SKU: BYK2895 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:19.742Z] SKU: BYK2895 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1703861953_BYK2895.jpg
-[2026-03-28T22:04:19.743Z] SKU: BYK2895 | BAŞARILI (Yeni)
-[2026-03-28T22:04:20.166Z] SKU: BKP8242 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:20.288Z] SKU: BKP8242 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704462648_BKP8242.jpg
-[2026-03-28T22:04:20.288Z] SKU: BKP8242 | BAŞARILI (Yeni)
-[2026-03-28T22:04:21.102Z] SKU: BKP8243 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:21.242Z] SKU: BKP8243 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704462711_BKP8243.jpg
-[2026-03-28T22:04:21.243Z] SKU: BKP8243 | BAŞARILI (Yeni)
-[2026-03-28T22:04:21.655Z] SKU: BKP8250 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:21.772Z] SKU: BKP8250 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704463264_BKP8250.jpg
-[2026-03-28T22:04:21.773Z] SKU: BKP8250 | BAŞARILI (Yeni)
-[2026-03-28T22:04:22.776Z] SKU: BKP8251 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:22.950Z] SKU: BKP8251 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704463305_BKP8251.jpg
-[2026-03-28T22:04:22.951Z] SKU: BKP8251 | BAŞARILI (Yeni)
-[2026-03-28T22:04:23.427Z] SKU: BYK2902 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:23.576Z] SKU: BYK2902 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704465103_BYK2902.jpg
-[2026-03-28T22:04:23.577Z] SKU: BYK2902 | BAŞARILI (Yeni)
-[2026-03-28T22:04:23.983Z] SKU: BKO8118 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:24.121Z] SKU: BKO8118 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704980130_BKO8118.jpg
-[2026-03-28T22:04:25.227Z] SKU: BKO8118 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704980130_BKO8118-2.jpg
-[2026-03-28T22:04:25.228Z] SKU: BKO8118 | BAŞARILI (Yeni)
-[2026-03-28T22:04:25.391Z] SKU: BKO8133 | HATA: Ikas HTTP Error 429: {"retryAfter":0.421,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:25.833Z","error":"Too Many Requests"}
-[2026-03-28T22:04:25.547Z] SKU: BKO8134 | HATA: Ikas HTTP Error 429: {"retryAfter":0.265,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:25.834Z","error":"Too Many Requests"}
-[2026-03-28T22:04:26.033Z] SKU: BKO8137 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:26.206Z] SKU: BKO8137 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982357_BKO8137.jpg
-[2026-03-28T22:04:26.317Z] SKU: BKO8137 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982357_BKO8137-2.jpg
-[2026-03-28T22:04:26.317Z] SKU: BKO8137 | BAŞARILI (Yeni)
-[2026-03-28T22:04:27.602Z] SKU: BKO8140 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:27.819Z] SKU: BKO8140 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982579_BKO8140.jpg
-[2026-03-28T22:04:27.997Z] SKU: BKO8140 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982579_BKO8140-2.jpg
-[2026-03-28T22:04:27.998Z] SKU: BKO8140 | BAŞARILI (Yeni)
-[2026-03-28T22:04:28.987Z] SKU: BKO8146 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:29.173Z] SKU: BKO8146 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982992_BKO8146.jpg
-[2026-03-28T22:04:29.297Z] SKU: BKO8146 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704982992_BKO8146-2.jpg
-[2026-03-28T22:04:29.297Z] SKU: BKO8146 | BAŞARILI (Yeni)
-[2026-03-28T22:04:29.715Z] SKU: BKO8152 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:29.833Z] SKU: BKO8152 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704983354_BKO8152.jpg
-[2026-03-28T22:04:29.988Z] SKU: BKO8152 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704983354_BKO8152-2.jpg
-[2026-03-28T22:04:29.989Z] SKU: BKO8152 | BAŞARILI (Yeni)
-[2026-03-28T22:04:30.407Z] SKU: BKO8169 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:30.554Z] SKU: BKO8169 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704984570_BKO8169.jpg
-[2026-03-28T22:04:30.673Z] SKU: BKO8169 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704984570_BKO8169-2.jpg
-[2026-03-28T22:04:30.674Z] SKU: BKO8169 | BAŞARILI (Yeni)
-[2026-03-28T22:04:31.874Z] SKU: BKO8177 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:32.014Z] SKU: BKO8177 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704985109_BKO8177.jpg
-[2026-03-28T22:04:32.121Z] SKU: BKO8177 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704985109_BKO8177-2.jpg
-[2026-03-28T22:04:32.122Z] SKU: BKO8177 | BAŞARILI (Yeni)
-[2026-03-28T22:04:32.600Z] SKU: BKO8178 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:32.776Z] SKU: BKO8178 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704985160_BKO8178.jpg
-[2026-03-28T22:04:32.887Z] SKU: BKO8178 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1704985160_BKO8178-2.jpg
-[2026-03-28T22:04:32.888Z] SKU: BKO8178 | BAŞARILI (Yeni)
-[2026-03-28T22:04:33.367Z] SKU: BYK2914 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:33.518Z] SKU: BYK2914 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705042687_BYK2914.jpg
-[2026-03-28T22:04:33.518Z] SKU: BYK2914 | BAŞARILI (Yeni)
-[2026-03-28T22:04:33.880Z] SKU: BYK2915 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:34.040Z] SKU: BYK2915 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705042847_BYK2915.jpg
-[2026-03-28T22:04:34.040Z] SKU: BYK2915 | BAŞARILI (Yeni)
-[2026-03-28T22:04:34.428Z] SKU: BYK2916 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:34.543Z] SKU: BYK2916 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705042917_BYK2916.jpg
-[2026-03-28T22:04:34.544Z] SKU: BYK2916 | BAŞARILI (Yeni)
-[2026-03-28T22:04:34.952Z] SKU: BYK2917 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:35.067Z] SKU: BYK2917 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705042977_BYK2917.jpg
-[2026-03-28T22:04:35.068Z] SKU: BYK2917 | BAŞARILI (Yeni)
-[2026-03-28T22:04:35.247Z] SKU: BYK2922 | HATA: Ikas HTTP Error 429: {"retryAfter":0.589,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:35.857Z","error":"Too Many Requests"}
-[2026-03-28T22:04:35.405Z] SKU: BYK2923 | HATA: Ikas HTTP Error 429: {"retryAfter":0.432,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:35.857Z","error":"Too Many Requests"}
-[2026-03-28T22:04:35.572Z] SKU: BYK2932 | HATA: Ikas HTTP Error 429: {"retryAfter":0.265,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:35.858Z","error":"Too Many Requests"}
-[2026-03-28T22:04:35.731Z] SKU: BYK2933 | HATA: Ikas HTTP Error 429: {"retryAfter":0.105,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:35.858Z","error":"Too Many Requests"}
-[2026-03-28T22:04:36.336Z] SKU: BYK2939 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:36.444Z] SKU: BYK2939 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705044267_BYK2939.jpg
-[2026-03-28T22:04:36.445Z] SKU: BYK2939 | BAŞARILI (Yeni)
-[2026-03-28T22:04:36.821Z] SKU: BB5743 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:37.265Z] SKU: BB5743 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705560777_BB5743.jpg
-[2026-03-28T22:04:37.376Z] SKU: BB5743 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705560777_BB5743-2.jpg
-[2026-03-28T22:04:37.376Z] SKU: BB5743 | BAŞARILI (Yeni)
-[2026-03-28T22:04:37.849Z] SKU: BB5744 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:37.959Z] SKU: BB5744 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705560839_BB5744.jpg
-[2026-03-28T22:04:37.959Z] SKU: BB5744 | BAŞARILI (Yeni)
-[2026-03-28T22:04:38.325Z] SKU: BYK2951 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:38.440Z] SKU: BYK2951 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705738921_BYK2951.jpg
-[2026-03-28T22:04:38.440Z] SKU: BYK2951 | BAŞARILI (Yeni)
-[2026-03-28T22:04:38.780Z] SKU: BYK2952 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:38.920Z] SKU: BYK2952 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705738957_BYK2952.jpg
-[2026-03-28T22:04:38.920Z] SKU: BYK2952 | BAŞARILI (Yeni)
-[2026-03-28T22:04:39.312Z] SKU: BYK2953 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:39.485Z] SKU: BYK2953 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705738995_BYK2953.jpg
-[2026-03-28T22:04:39.485Z] SKU: BYK2953 | BAŞARILI (Yeni)
-[2026-03-28T22:04:39.939Z] SKU: BYK2954 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:40.045Z] SKU: BYK2954 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705739044_BYK2954.jpg
-[2026-03-28T22:04:40.046Z] SKU: BYK2954 | BAŞARILI (Yeni)
-[2026-03-28T22:04:40.428Z] SKU: BYK2955 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:40.580Z] SKU: BYK2955 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705739136_BYK2955.jpg
-[2026-03-28T22:04:40.581Z] SKU: BYK2955 | BAŞARILI (Yeni)
-[2026-03-28T22:04:40.997Z] SKU: BYK2957 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:41.106Z] SKU: BYK2957 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705739396_BYK2957.jpg
-[2026-03-28T22:04:41.107Z] SKU: BYK2957 | BAŞARILI (Yeni)
-[2026-03-28T22:04:41.761Z] SKU: BYK2959 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:41.884Z] SKU: BYK2959 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705739506_BYK2959.jpg
-[2026-03-28T22:04:41.884Z] SKU: BYK2959 | BAŞARILI (Yeni)
-[2026-03-28T22:04:42.301Z] SKU: BYK2963 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:42.416Z] SKU: BYK2963 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705739705_BYK2963.jpg
-[2026-03-28T22:04:42.416Z] SKU: BYK2963 | BAŞARILI (Yeni)
-[2026-03-28T22:04:42.933Z] SKU: BKP8301 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:43.058Z] SKU: BKP8301 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1705742191_BKP8301.jpg
-[2026-03-28T22:04:43.058Z] SKU: BKP8301 | BAŞARILI (Yeni)
-[2026-03-28T22:04:43.472Z] SKU: BKP8322 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 429: {"retryAfter":2.506,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:43.524Z] SKU: BKP8322 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1706196861_BKP8322.jpg
-[2026-03-28T22:04:43.525Z] SKU: BKP8322 | BAŞARILI (Yeni)
-[2026-03-28T22:04:43.699Z] SKU: BKP8331 | HATA: Ikas HTTP Error 429: {"retryAfter":2.197,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:43.889Z] SKU: BYK2975 | HATA: Ikas HTTP Error 429: {"retryAfter":2.009,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.047Z] SKU: PR1207 | HATA: Ikas HTTP Error 429: {"retryAfter":1.849,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.213Z] SKU: PR1209 | HATA: Ikas HTTP Error 429: {"retryAfter":1.684,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.374Z] SKU: PR1211 | HATA: Ikas HTTP Error 429: {"retryAfter":1.521,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.546Z] SKU: PR1217 | HATA: Ikas HTTP Error 429: {"retryAfter":1.349,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.714Z] SKU: PR1220 | HATA: Ikas HTTP Error 429: {"retryAfter":1.182,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:44.882Z] SKU: PR1223 | HATA: Ikas HTTP Error 429: {"retryAfter":1.013,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:45.059Z] SKU: PR1224 | HATA: Ikas HTTP Error 429: {"retryAfter":0.844,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:45.221Z] SKU: BKO8194 | HATA: Ikas HTTP Error 429: {"retryAfter":0.674,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:45.407Z] SKU: BKO8208 | HATA: Ikas HTTP Error 429: {"retryAfter":0.488,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.917Z","error":"Too Many Requests"}
-[2026-03-28T22:04:45.568Z] SKU: BKP8335 | HATA: Ikas HTTP Error 429: {"retryAfter":0.328,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:45.895Z] SKU: BB5796 | HATA: Ikas HTTP Error 429: {"retryAfter":0.008,"limit":50,"remaining":0,"reset":"2026-03-28T22:04:45.916Z","error":"Too Many Requests"}
-[2026-03-28T22:04:46.437Z] SKU: BB5797 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:46.563Z] SKU: BB5797 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1706959982_BB5797.jpg
-[2026-03-28T22:04:46.564Z] SKU: BB5797 | BAŞARILI (Yeni)
-[2026-03-28T22:04:46.981Z] SKU: BYK2982 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:47.169Z] SKU: BYK2982 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707224761_BYK2982.jpg
-[2026-03-28T22:04:47.170Z] SKU: BYK2982 | BAŞARILI (Yeni)
-[2026-03-28T22:04:47.554Z] SKU: BYK2984 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:49.195Z] SKU: BYK2984 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707224877_BYK2984.jpg
-[2026-03-28T22:04:49.195Z] SKU: BYK2984 | BAŞARILI (Yeni)
-[2026-03-28T22:04:49.672Z] SKU: BYK2986 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:49.852Z] SKU: BYK2986 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225014_BYK2986.jpg
-[2026-03-28T22:04:49.853Z] SKU: BYK2986 | BAŞARILI (Yeni)
-[2026-03-28T22:04:51.086Z] SKU: BYK2987 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:51.198Z] SKU: BYK2987 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225138_BYK2987.jpg
-[2026-03-28T22:04:51.199Z] SKU: BYK2987 | BAŞARILI (Yeni)
-[2026-03-28T22:04:51.555Z] SKU: BYK2989 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:51.930Z] SKU: BYK2989 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225279_BYK2989.jpg
-[2026-03-28T22:04:51.931Z] SKU: BYK2989 | BAŞARILI (Yeni)
-[2026-03-28T22:04:52.322Z] SKU: BYK2991 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:52.447Z] SKU: BYK2991 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225420_BYK2991.jpg
-[2026-03-28T22:04:52.447Z] SKU: BYK2991 | BAŞARILI (Yeni)
-[2026-03-28T22:04:52.802Z] SKU: BYK2992 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:52.959Z] SKU: BYK2992 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225481_BYK2992.jpg
-[2026-03-28T22:04:52.960Z] SKU: BYK2992 | BAŞARILI (Yeni)
-[2026-03-28T22:04:53.394Z] SKU: BYK2997 | Stok GÜNCELLENEMEDİ: Ikas HTTP Error 400: {"errors":[{"message":"Field \"saveProductStockLocations\" must not have a selection since type \"Boolean!\" has no subfields.","locations":[{"line":3,"column":48}],"extensions":{"code":"GRAPHQL_VALIDATION_FAILED"}}]}
-
-[2026-03-28T22:04:53.880Z] SKU: BYK2997 | Resim YÜKLENEMEDİ: https://app.ebijuteri.com/storage/files/uploads/pimg/1707225867_BYK2997.jpg
-[2026-03-28T22:04:53.881Z] SKU: BYK2997 | BAŞARILI (Yeni)
-[2026-03-28T22:45:52.405Z] --------------------------------------------------
-[2026-03-28T22:45:52.406Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: 10
-[2026-03-28T22:46:03.632Z] SKU: HH850-KS | Stok GÜNCELLENEMEDİ: [SaveProductStock] Ikas GraphQL Error: Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "stockCount" of required type "Float!" was not provided. | Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "stockLocationId" of required type "String!" was not provided. | Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "variantId" of required type "String!" was not provided. | Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "branchId" is not defined by type "ProductStockLocationInput". | Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "productVariantId" is not defined by type "ProductStockLocationInput". Did you mean "productId" or "variantId"? | Variable "$input" got invalid value { branchId: "c90e89aa-51a0-4bb3-9363-25914393dba5", productId: "0f68ddf9-f308-47c3-8531-a32b03ccf6fb", productVariantId: "3fb27dda-dce9-41ec-8e0b-470ebeb3f8c5", stock: 5 } at "input.productStockLocationInputs[0]"; Field "stock" is not defined by type "ProductStockLocationInput".
-[2026-03-28T22:46:03.831Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: HATA: İstek Hatası -> Unexpected token 'O', "OK" is not valid JSON -> https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-1.jpg
-[2026-03-28T22:46:05.413Z] SKU: HH850-KS | Resim YÜKLENEMEDİ: HATA: İstek Hatası -> Unexpected token 'O', "OK" is not valid JSON -> https://app.ebijuteri.com/storage/files/uploads/pimg/HH850-2.jpg
-[2026-03-28T22:46:06.128Z] SKU: HH850-KS | BAŞARILI (Yeni)
-[2026-03-28T22:46:06.642Z] SYNC BİTTİ. Başarılı: 1, Hata: 0
+[] Loglar temizlendi. 
+[2026-03-29T15:49:39.506Z] SKU: BYK2655 | ✅ Yeni
+[2026-03-29T15:49:43.203Z] SKU: BYK2665 | ✅ Yeni
+[2026-03-29T15:49:45.729Z] SKU: BB5285 | ✅ Yeni
+[2026-03-29T15:49:48.431Z] SKU: BKO7411 | ✅ Yeni
+[2026-03-29T15:49:50.252Z] SKU: BYK2706 | ✅ Yeni
+[2026-03-29T15:49:52.924Z] SKU: BKO7427 | ✅ Yeni
+[2026-03-29T15:49:55.505Z] SKU: BKP7477 | ✅ Yeni
+[2026-03-29T15:49:57.271Z] SKU: BKP7482 | ✅ Yeni
+[2026-03-29T15:49:59.595Z] SKU: BKO7451 | ✅ Yeni
+[2026-03-29T15:50:00.020Z] ==================================================
+[2026-03-29T15:50:00.021Z] SYNC BAŞLADI: http://xml.ebijuteri.com/api/xml/69c7a7400dc8522e600426f4?format=old - Limit: Tümü
+[2026-03-29T15:50:00.022Z] XML çekiliyor...
+[2026-03-29T15:50:03.022Z] SKU: BKO7459 | ✅ Yeni
+[2026-03-29T15:50:04.750Z] SKU: BYK2712 | ✅ Yeni
+[2026-03-29T15:50:06.410Z] SKU: BYK2715 | ✅ Yeni
+[2026-03-29T15:50:07.947Z] SKU: BKP7500 | ✅ Yeni
+[2026-03-29T15:50:09.380Z] XML: 4683 ürün bulundu.
+[2026-03-29T15:50:09.397Z] Filtreleme sonrası: 4268 ürün işlenecek (415 adet bayi fiyat filtresiyle çıkarıldı).
+[2026-03-29T15:50:09.398Z] Ikas kimlik doğrulaması yapılıyor...
+[2026-03-29T15:50:10.445Z] SKU: BKP7501 | ✅ Yeni
+[2026-03-29T15:50:12.514Z] SKU: BKP7504 | ✅ Yeni
+[2026-03-29T15:50:14.304Z] SKU: BKP7525 | ✅ Yeni
+[2026-03-29T15:50:18.309Z] SKU: BKP7527 | ✅ Yeni
+[2026-03-29T15:50:19.190Z] SKU: HH850-KS | ✅ Güncellendi
+[2026-03-29T15:50:19.886Z] SKU: BKP7528 | ✅ Yeni
+[2026-03-29T15:50:21.533Z] SKU: HH1201 | ✅ Güncellendi
+[2026-03-29T15:50:22.634Z] SKU: BKO7472 | ✅ Yeni
+[2026-03-29T15:50:24.605Z] SKU: BKP7539 | ✅ Yeni
+[2026-03-29T15:50:25.466Z] SKU: BB3566 | ✅ Güncellendi
+[2026-03-29T15:50:28.179Z] SKU: BB3569 | ✅ Güncellendi
+[2026-03-29T15:50:28.535Z] SKU: BKP7556 | ✅ Yeni
+[2026-03-29T15:50:30.436Z] SKU: EB3212 | ✅ Güncellendi
+[2026-03-29T15:50:31.239Z] SKU: ERK1320 | ✅ Yeni
+[2026-03-29T15:50:32.401Z] SKU: EB3238 | ✅ Güncellendi
+[2026-03-29T15:50:33.619Z] SKU: ERK1321 | ✅ Yeni
+[2026-03-29T15:50:35.086Z] SKU: EB3240 | ✅ Güncellendi
+[2026-03-29T15:50:36.065Z] SKU: ERK1322 | ✅ Yeni
+[2026-03-29T15:50:36.448Z] SKU: BYK2052 | ✅ Güncellendi
+[2026-03-29T15:50:37.938Z] SKU: BYK2053 | ✅ Güncellendi
+[2026-03-29T15:50:38.648Z] SKU: ERK1323 | ✅ Yeni
+[2026-03-29T15:50:39.298Z] SKU: BYK2067 | ✅ Güncellendi
+[2026-03-29T15:50:40.181Z] SKU: BB5360 | ✅ Yeni
+[2026-03-29T15:50:40.698Z] SKU: BYK2068 | ✅ Güncellendi
+[2026-03-29T15:50:42.148Z] SKU: BYK2073 | ✅ Güncellendi
+[2026-03-29T15:50:42.316Z] SKU: BB5361 | ✅ Yeni
+[2026-03-29T15:50:43.908Z] SKU: BYK2725 | ✅ Yeni
+[2026-03-29T15:50:45.098Z] SKU: BKO5902 | ✅ Güncellendi
+[2026-03-29T15:50:46.414Z] SKU: BKP7569 | ✅ Yeni
+[2026-03-29T15:50:47.570Z] SKU: BKO5903 | ✅ Güncellendi
+[2026-03-29T15:50:48.498Z] SKU: BYK2741 | ✅ Yeni
+[2026-03-29T15:50:49.865Z] SKU: BKO5909 | ✅ Güncellendi
+[2026-03-29T15:50:50.011Z] SKU: BYK2748 | ✅ Yeni
+[2026-03-29T15:50:51.513Z] SKU: BKP7680 | ✅ Yeni
+[2026-03-29T15:50:53.248Z] SKU: BKO5926 | ✅ Güncellendi
+[2026-03-29T15:50:54.180Z] SKU: BKO7566 | ✅ Yeni
+[2026-03-29T15:50:54.600Z] SKU: BB4117 | ✅ Güncellendi
+[2026-03-29T15:50:55.962Z] SKU: BB4119 | ✅ Güncellendi
+[2026-03-29T15:50:56.563Z] SKU: BKO7567 | ✅ Yeni
+[2026-03-29T15:50:58.508Z] SKU: BB4172 | ✅ Güncellendi
+[2026-03-29T15:50:59.736Z] SKU: BKO7578 | ✅ Yeni
+[2026-03-29T15:51:01.411Z] SKU: BYK2190 | ✅ Güncellendi
+[2026-03-29T15:51:02.663Z] SKU: BKO7588 | ✅ Yeni
+[2026-03-29T15:51:04.044Z] SKU: BYK2191 | ✅ Güncellendi
+[2026-03-29T15:51:04.275Z] SKU: BKP7702 | ✅ Yeni
+[2026-03-29T15:51:06.086Z] SKU: BKP7703 | ✅ Yeni
+[2026-03-29T15:51:07.079Z] SKU: BKO6160 | ✅ Güncellendi
+[2026-03-29T15:51:09.390Z] SKU: BKP6222 | ✅ Güncellendi
+[2026-03-29T15:51:09.437Z] SKU: BYK2765 | ✅ Yeni
+[2026-03-29T15:51:11.949Z] SKU: BKO7614 | ✅ Yeni
+[2026-03-29T15:51:12.168Z] SKU: BKO6207 | ✅ Güncellendi
+[2026-03-29T15:51:14.436Z] SKU: BKO6226 | ✅ Güncellendi
+[2026-03-29T15:51:15.603Z] SKU: BKO7620 | ✅ Yeni
+[2026-03-29T15:51:16.647Z] SKU: BKO6227 | ✅ Güncellendi
+[2026-03-29T15:51:17.937Z] SKU: BKO7626 | ✅ Yeni
+[2026-03-29T15:51:18.969Z] SKU: BKO6229 | ✅ Güncellendi
+[2026-03-29T15:51:20.346Z] SKU: BKO7627 | ✅ Yeni
+[2026-03-29T15:51:21.947Z] SKU: BKO6230 | ✅ Güncellendi
+[2026-03-29T15:51:22.853Z] SKU: BKO7634 | ✅ Yeni
+[2026-03-29T15:51:24.186Z] SKU: BKO6242 | ✅ Güncellendi
+[2026-03-29T15:51:25.244Z] SKU: BKO7635 | ✅ Yeni
+[2026-03-29T15:51:26.677Z] SKU: BKO6243 | ✅ Güncellendi
+[2026-03-29T15:51:26.754Z] SKU: BB5438 | ✅ Yeni
+[2026-03-29T15:51:28.618Z] SKU: BB5452 | ✅ Yeni
+[2026-03-29T15:51:28.931Z] SKU: BYK2237 | ✅ Güncellendi
+[2026-03-29T15:51:30.124Z] SKU: BB5453 | ✅ Yeni
+[2026-03-29T15:51:31.203Z] SKU: BKP6316 | ✅ Güncellendi
+[2026-03-29T15:51:31.742Z] SKU: BB5457 | ✅ Yeni
+[2026-03-29T15:51:33.682Z] SKU: BKP7765 | ✅ Yeni
+[2026-03-29T15:51:34.010Z] SKU: BKO6332 | ✅ Güncellendi
+[2026-03-29T15:51:36.243Z] SKU: BKO6392 | ✅ Güncellendi
+[2026-03-29T15:51:36.399Z] SKU: BKO7676 | ✅ Yeni
+[2026-03-29T15:51:38.124Z] SKU: BKP7855 | ✅ Yeni
+[2026-03-29T15:51:39.167Z] SKU: BKO6435 | ✅ Güncellendi
+[2026-03-29T15:51:40.301Z] SKU: BKP7856 | ✅ Yeni
+[2026-03-29T15:51:41.516Z] SKU: BKO6437 | ✅ Güncellendi
+[2026-03-29T15:51:42.629Z] SKU: BKO7688 | ✅ Yeni
+[2026-03-29T15:51:43.658Z] SKU: BKO6438 | ✅ Güncellendi
+[2026-03-29T15:51:45.014Z] SKU: BKO7689 | ✅ Yeni
+[2026-03-29T15:51:45.842Z] SKU: BKO6439 | ✅ Güncellendi
+[2026-03-29T15:51:47.417Z] SKU: BKO7700 | ✅ Yeni
+[2026-03-29T15:51:48.444Z] SKU: BKO6440 | ✅ Güncellendi
+[2026-03-29T15:51:49.229Z] SKU: BKP7885 | ✅ Yeni
+[2026-03-29T15:51:50.649Z] SKU: BKO6441 | ✅ Güncellendi
+[2026-03-29T15:51:51.229Z] SKU: BKP7886 | ✅ Yeni
+[2026-03-29T15:51:52.880Z] SKU: BYK2318 | ✅ Güncellendi
+[2026-03-29T15:51:53.147Z] SKU: BKP7891 | ✅ Yeni
+[2026-03-29T15:51:54.780Z] SKU: BKP7892 | ✅ Yeni
+[2026-03-29T15:51:55.113Z] SKU: BYK2319 | ✅ Güncellendi
+[2026-03-29T15:51:58.747Z] SKU: BYK2341 | ✅ Güncellendi
+[2026-03-29T15:52:00.262Z] SKU: BKP7893 | ✅ Yeni
+[2026-03-29T15:52:01.779Z] SKU: BKP7894 | ✅ Yeni
+[2026-03-29T15:52:02.029Z] SKU: BYK2342 | ✅ Güncellendi
+[2026-03-29T15:52:03.462Z] SKU: BB5541 | ✅ Yeni
+[2026-03-29T15:52:03.513Z] SKU: BKO6569 | ✅ Güncellendi
+[2026-03-29T15:52:06.292Z] SKU: BKO7747 | ✅ Yeni
+[2026-03-29T15:52:07.608Z] SKU: BKP6727 | ✅ Güncellendi
+[2026-03-29T15:52:08.177Z] SKU: BKP7922 | ✅ Yeni
+[2026-03-29T15:52:09.920Z] SKU: BKP7929 | ✅ Yeni
+[2026-03-29T15:52:10.408Z] SKU: BB4636 | ✅ Güncellendi
+[2026-03-29T15:52:11.480Z] SKU: BKP7934 | ✅ Yeni
+[2026-03-29T15:52:12.682Z] SKU: BKO6812 | ✅ Güncellendi
+[2026-03-29T15:52:13.638Z] SKU: BKP7940 | ✅ Yeni
+[2026-03-29T15:52:15.311Z] SKU: BKO6813 | ✅ Güncellendi
+[2026-03-29T15:52:15.477Z] SKU: BKP7950 | ✅ Yeni
+[2026-03-29T15:52:17.028Z] SKU: BKP7951 | ✅ Yeni
+[2026-03-29T15:52:18.527Z] SKU: BKP7964 | ✅ Yeni
+[2026-03-29T15:52:18.794Z] SKU: BKO6814 | ✅ Güncellendi
+[2026-03-29T15:52:20.062Z] SKU: BKP7979 | ✅ Yeni
+[2026-03-29T15:52:21.078Z] SKU: BKO6815 | ✅ Güncellendi
+[2026-03-29T15:52:21.693Z] SKU: BKP7984 | ✅ Yeni
+[2026-03-29T15:52:23.277Z] SKU: BKP7992 | ✅ Yeni
+[2026-03-29T15:52:24.993Z] SKU: BKO6816 | ✅ Güncellendi
+[2026-03-29T15:52:25.327Z] SKU: BB5584 | ✅ Yeni
+[2026-03-29T15:52:27.376Z] SKU: BKO6817 | ✅ Güncellendi
+[2026-03-29T15:52:28.394Z] SKU: BKO7789 | ✅ Yeni
