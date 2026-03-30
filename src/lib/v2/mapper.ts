@@ -24,7 +24,7 @@ function getNestedValue(obj: any, path: string): any {
     const parts = path.split('.');
     let current = obj;
     for (const part of parts) {
-        if (current[part] === undefined) return undefined;
+        if (!current || typeof current !== 'object' || current[part] === undefined) return undefined;
         current = current[part];
     }
     return current;
@@ -32,6 +32,7 @@ function getNestedValue(obj: any, path: string): any {
 
 function parsePrice(val: any): number {
     if (val === undefined || val === null || val === '') return 0;
+    // Sayısal olmayan karakterleri temizle (virgülü noktaya çevir)
     const clean = String(val).replace(',', '.').replace(/[^0-9.]/g, '');
     const num = parseFloat(clean);
     return isNaN(num) ? 0 : num;
@@ -39,7 +40,7 @@ function parsePrice(val: any): number {
 
 // XML item'ından fiyat çeker — birden fazla olası alan adını dener
 function extractPrice(xmlItem: any, priceField: string): number {
-    // 1. Kullanıcının seçtiği alan (iç içe olabilir: Fiyatlar.bayi_fiyati)
+    // 1. Kullanıcının seçtiği alan
     const selectedVal = getNestedValue(xmlItem, priceField);
     if (selectedVal !== undefined) {
         const val = parsePrice(selectedVal);
@@ -67,11 +68,11 @@ function extractPrice(xmlItem: any, priceField: string): number {
 }
 
 export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], priceField: string = 'bayi_fiyati'): MappedProduct {
-    // Ham bayi_fiyati değerini her zaman çek (filtre için bayi_fiyati ismine veya nested haline bakar)
+    // Ham bayi_fiyati değerini her zaman çek
     const rawBayiFiyati = parsePrice(getNestedValue(xmlItem, 'bayi_fiyati') || getNestedValue(xmlItem, 'Fiyatlar.bayi_fiyati') || 0);
 
     const mappedItem: MappedProduct = {
-        name: String(getNestedValue(xmlItem, 'urun_adi') || getNestedValue(xmlItem, 'name') || getNestedValue(xmlItem, 'Name') || 'Bilinmeyen Ürün'),
+        name: String(getNestedValue(xmlItem, 'urun_adi') || getNestedValue(xmlItem, 'name') || getNestedValue(xmlItem, 'Name') || getNestedValue(xmlItem, 'UrunAdi') || 'Bilinmeyen Ürün'),
         sku:  String(getNestedValue(xmlItem, 'stok_kodu') || getNestedValue(xmlItem, 'StokKodu') || getNestedValue(xmlItem, 'sku') || getNestedValue(xmlItem, 'code') || `SKU-${Math.random().toString(36).substr(2, 9)}`),
         parentSku: String(getNestedValue(xmlItem, 'grup_kodu') || getNestedValue(xmlItem, 'GrupKodu') || getNestedValue(xmlItem, 'parent_sku') || ''),
         price: extractPrice(xmlItem, priceField),
@@ -85,16 +86,21 @@ export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], pr
     };
 
     // Eğer parentSku boşsa sku ile aynı yapalım
-    if (!mappedItem.parentSku || mappedItem.parentSku === 'undefined') mappedItem.parentSku = mappedItem.sku;
+    if (!mappedItem.parentSku || mappedItem.parentSku === 'undefined' || mappedItem.parentSku === '') mappedItem.parentSku = mappedItem.sku;
 
     // Kategori ayrıştırma
-    const kat = getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category');
+    const kat = getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category') || getNestedValue(xmlItem, 'Kategori');
     if (kat) {
         if (Array.isArray(kat)) mappedItem.categories = kat.map(String);
         else if (typeof kat === 'string') mappedItem.categories = kat.split('>').map(c => c.trim()).filter(Boolean);
     }
 
-    // Resim toplama (Her seviyeyi tara)
+    // Eğer isim hala Bilinmeyen Ürün ise kategoriyi de öyle setle
+    if (mappedItem.name === 'Bilinmeyen Ürün' && mappedItem.categories.length === 0) {
+        // Bu durumda mapping hatalı olabilir, sessiz kalmak yerine Ikas'ta "Kategorisiz" diyebiliriz
+    }
+
+    // Resim toplama
     const collectImages = (obj: any) => {
         if (!obj) return;
         if (typeof obj === 'string' && obj.startsWith('http')) {
@@ -112,7 +118,7 @@ export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], pr
         mappings.forEach(map => {
             if (map.isIgnored) return;
             const val = getNestedValue(xmlItem, map.xmlNode);
-            if (val !== undefined) {
+            if (val !== undefined && val !== null) {
                 if (map.ikasField === 'price') mappedItem.price = parsePrice(val);
                 else if (map.ikasField === 'stock') mappedItem.stock = Math.floor(parsePrice(val));
                 else mappedItem[map.ikasField] = val;

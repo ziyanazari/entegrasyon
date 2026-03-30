@@ -52,7 +52,12 @@ export default function V2Dashboard() {
       } catch (e) { console.error(e); }
   };
 
-  useEffect(() => { loadSources(); }, []);
+  // Otomatik yenileme (Sync durumunu takip etmek için her 10 saniyede bir)
+  useEffect(() => {
+    loadSources();
+    const interval = setInterval(loadSources, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleAnalyzeAndAdd = async (e: React.FormEvent) => {
       e.preventDefault();
@@ -127,21 +132,41 @@ export default function V2Dashboard() {
 
   const handleSync = async (sourceId: string) => {
       setSyncingId(sourceId);
-      setSyncErrors(prev => ({ ...prev, [sourceId]: '' }));
-      setSyncResults(prev => ({ ...prev, [sourceId]: null }));
+      // Lokal state'i anında güncelle ki "Durdur" butonu hemen çıksın
+      setSources(prev => prev.map(s => s.id === sourceId ? { ...s, isSyncing: true } : s));
+      
       try {
           const res = await fetch('/api/v2/sync', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ sourceId })
           });
-          const data = await res.json();
-          if (!res.ok) throw new Error(data.error || 'Hata');
-          setSyncResults(prev => ({ ...prev, [sourceId]: data }));
-          loadSources();
+          const result = await res.json();
+          setSyncResults({ ...syncResults, [sourceId]: result });
+          if (result.error) setSyncErrors({ ...syncErrors, [sourceId]: result.error });
       } catch (err: any) {
-          setSyncErrors(prev => ({ ...prev, [sourceId]: err.message }));
-      } finally { setSyncingId(null); }
+          setSyncErrors({ ...syncErrors, [sourceId]: err.message });
+      } finally {
+          setSyncingId(null);
+          loadSources();
+      }
+  };
+
+  const handleStop = async (sourceId: string) => {
+    if (!confirm('Senkronizasyonu durdurmak istiyor musunuz? Mevcut paket bitince islem duracaktir.')) return;
+    
+    try {
+        const res = await fetch('/api/v2/sources/stop', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ sourceId })
+        });
+        if (res.ok) {
+            // Lokal state'i güncelle
+            setSources(prev => prev.map(s => s.id === sourceId ? { ...s, isSyncing: false } : s));
+            loadSources();
+        }
+    } catch (e) { console.error(e); }
   };
 
   const handleSyncAll = async () => {
@@ -260,13 +285,7 @@ export default function V2Dashboard() {
                                     <button
                                         onClick={() => {
                                             if (src.isSyncing) {
-                                                if (confirm('Senkronizasyonu durdurmak istiyor musunuz? Mevcut paket bitince islem duracaktir.')) {
-                                                    fetch('/api/v2/sources/stop', {
-                                                        method: 'POST',
-                                                        headers: { 'Content-Type': 'application/json' },
-                                                        body: JSON.stringify({ sourceId: src.id })
-                                                    }).then(loadSources);
-                                                }
+                                                handleStop(src.id);
                                             } else {
                                                 handleSync(src.id);
                                             }
