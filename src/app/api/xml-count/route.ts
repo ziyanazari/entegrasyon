@@ -1,21 +1,21 @@
-// src/app/api/sync/route.ts
+// src/app/api/xml-count/route.ts
 import { NextResponse } from 'next/server';
-import { runSync } from '@/lib/sync-service';
+import { getXmlProductCount } from '@/lib/sync-service';
 import fs from 'fs';
 import path from 'path';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { xmlUrl, sourceName, limit, minPrice, profitMargin } = body;
+    const { xmlUrl } = body;
 
     if (!xmlUrl || typeof xmlUrl !== 'string') {
       return NextResponse.json({ error: 'xmlUrl gerekli' }, { status: 400 });
     }
 
-    const results = await runSync(xmlUrl, sourceName, limit, minPrice, profitMargin);
+    const count = await getXmlProductCount(xmlUrl);
 
-    // Update sync_config.json with latest stats
+    // Save count to config
     try {
         const configPath = path.join(process.cwd(), 'sync_config.json');
         if (fs.existsSync(configPath)) {
@@ -23,27 +23,19 @@ export async function POST(request: Request) {
             const index = configData.configs.findIndex((c: any) => c.url === xmlUrl);
             
             if (index !== -1) {
-                configData.configs[index].lastSync = {
-                    status: 'success',
-                    date: new Date().toISOString(),
-                    processed: results.processedTotal,
-                    success: results.success,
-                    failed: results.failed
-                };
+                configData.configs[index].totalProducts = count;
                 fs.writeFileSync(configPath, JSON.stringify(configData, null, 2), 'utf8');
             }
         }
-    } catch (e) {
-        console.warn('Stats kaydedilemedi:', e);
-    }
+    } catch (e) {}
 
     return NextResponse.json({
-      message: 'Sync tamamlandı',
-      results,
+      message: 'XML ürün sayısı çekildi',
+      count,
     });
 
   } catch (error: any) {
-    console.error('Sync API hatası:', error);
+    console.error('XML Count API hatası:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

@@ -18,9 +18,10 @@ export interface IkasProductData {
   taxRate: number;
   images: string[];
   brand: string;
-  features?: string;
   description?: string;
+  shortDescription?: string;
   categoryIds?: string[];
+  tagIds?: string[];
 }
 
 /**
@@ -50,11 +51,14 @@ export async function sendProductToIkas(productData: IkasProductData, token: str
     name: productData.name,
     type: 'PHYSICAL',
     description: productData.description || '',
+    shortDescription: productData.shortDescription || '',
     categoryIds: productData.categoryIds || [],
+    tagIds: productData.tagIds || [],
     salesChannelIds: activeChannels,
     salesChannels: activeChannels.map(id => ({ id, status: 'VISIBLE' })),
     variants: [
       {
+        id: productData.id ? undefined : undefined, // Variant ID logic can be more complex, but for now we update main product
         sku: productData.sku,
         prices: [
           {
@@ -64,6 +68,10 @@ export async function sendProductToIkas(productData: IkasProductData, token: str
       }
     ]
   };
+
+  if (productData.id) {
+    input.id = productData.id;
+  }
 
   return ikasGraphQLRequest(token, query, { input });
 }
@@ -86,17 +94,11 @@ export async function updateProductInIkas(ikasId: string, productData: Partial<I
     }
   `;
 
-  // Sadece fiyatı güncelle. SKU olmadan varyant güncellemek sorunlara yol açabilir.
-  // Mevcut varyantı korumak için sadece id gönder.
   const input: any & { id: string } = {
     id: ikasId,
-    // Varyantları güncellemek istiyorsak, mevcut varyantın id'si de olmalı.
-    // Aksi takdirde Ikas yeni bir varyant ekleyebilir.
-    // Bu yüzden sadece ürün seviyesindeki alanları güncelliyoruz.
+    shortDescription: productData.shortDescription || '',
   };
 
-  // Eğer sellingPrice varsa fiyatı güncelle (varyant id olmadan güvenli değil, atla)
-  // Sadece ürün meta bilgilerini güncelle
   return ikasGraphQLRequest(token, query, { input });
 }
 
@@ -104,14 +106,13 @@ export async function updateProductInIkas(ikasId: string, productData: Partial<I
  * Fetches a product from ikas by SKU
  */
 export async function getIkasProductBySku(sku: string, token: string): Promise<any | null> {
-  // Ikas'ta ürünleri SKU ile aramak için listProduct kullan
-  // Not: listProduct yerine listProducts olabilir — her ikisini de dene
   const query = `
     query GetProductBySku($sku: String) {
       listProduct(search: $sku, pagination: { limit: 1 }) {
         data {
           id
           name
+          shortDescription
           variants {
             id
             sku
@@ -129,7 +130,6 @@ export async function getIkasProductBySku(sku: string, token: string): Promise<a
 
     if (products.length === 0) return null;
 
-    // SKU tam eşleşmesini kontrol et (search bazen genel sonuç döner)
     const exactMatch = products.find((p: any) =>
       p.variants?.some((v: any) => v.sku === sku)
     );

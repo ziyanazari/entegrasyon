@@ -19,7 +19,7 @@ export interface SyncResult {
 function appendLog(message: string) {
   try {
     const logPath = path.join(process.cwd(), 'sync_logs.txt');
-    const time = new Date().toISOString();
+    const time = new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' });
     const line = `[${time}] ${message}\n`;
     fs.appendFileSync(logPath, line, 'utf8');
     console.log(message);
@@ -57,12 +57,18 @@ function extractProductsArray(xmlData: any): any[] {
   return [];
 }
 
-export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResult> {
+export async function runSync(
+  xmlUrl: string, 
+  sourceName?: string, 
+  limit?: number,
+  minPrice: number = 0,
+  profitMargin: number = 0
+): Promise<SyncResult> {
   const startTime = Date.now();
   const results: SyncResult = { processedTotal: 0, success: 0, failed: 0, errors: [] };
 
   appendLog('==================================================');
-  appendLog(`SYNC BAŞLADI: ${xmlUrl} - Limit: ${limit || 'Tümü'}`);
+  appendLog(`SYNC BAŞLADI: ${xmlUrl} | Kaynak: ${sourceName || 'Bilinmeyen'} | Min: ${minPrice} | Kar: %${profitMargin}`);
 
   try {
     // 1. XML Çek & Parse
@@ -75,22 +81,30 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
     }
     appendLog(`XML: ${allProductsArray.length} ürün bulundu.`);
 
-    // 2. Filtrele (buyingPrice > 35)
+    // 2. Filtrele & Kar Marjı Uygula
     const validProducts: { xmlProduct: any; ikasProduct: any }[] = [];
     let filteredOut = 0;
 
     for (const xmlProduct of allProductsArray) {
       const ikasProduct = mapXmlToIkasProduct(xmlProduct);
-      if (ikasProduct.buyingPrice <= 35) {
+      
+      // Bareme göre filtrele (Maliyet üzerinden değil, satış fiyatı üzerinden kontrol edelim)
+      if (ikasProduct.sellingPrice < minPrice) {
         filteredOut++;
         continue;
       }
+
+      // Kar Marjı Uygula (Satış fiyatına ekle)
+      if (profitMargin > 0) {
+        ikasProduct.sellingPrice = Math.round(ikasProduct.sellingPrice * (1 + profitMargin / 100));
+      }
+
       validProducts.push({ xmlProduct, ikasProduct });
     }
 
     const productsToProcess = limit ? validProducts.slice(0, limit) : validProducts;
     results.processedTotal = productsToProcess.length;
-    appendLog(`Filtreleme sonrası: ${productsToProcess.length} ürün işlenecek (${filteredOut} adet bayi fiyat filtresiyle çıkarıldı).`);
+    appendLog(`Filtreleme sonrası: ${productsToProcess.length} ürün işlenecek (${filteredOut} adet barem filtresiyle çıkarıldı).`);
 
     // 3. Ikas Token & Stok Konumu
     appendLog('Ikas kimlik doğrulaması yapılıyor...');
@@ -141,6 +155,11 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
           categoryIds.push(ikasCategoryMap.get(ikasProduct.subCategory)!);
         }
         ikasProduct.categoryIds = categoryIds;
+        
+        // Kaynak bilgisini shortDescription'a ekle
+        if (sourceName) {
+            ikasProduct.shortDescription = `[XML_Source: ${sourceName}]`;
+        }
 
         const existingProduct = await getIkasProductBySku(sku, token);
         let productId: string | null = null;
@@ -150,6 +169,10 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
         if (existingProduct) {
           productId = existingProduct.id;
           variantId = existingProduct.variants?.[0]?.id || null;
+          
+          // Mevcut ürünü de GÜNCELLE (Fiyat değişikliği vb. için)
+          ikasProduct.id = productId;
+          await sendProductToIkas(ikasProduct, token);
         } else {
           const createdResponse = await sendProductToIkas(ikasProduct, token);
           const createdData = createdResponse?.saveProduct;
@@ -166,8 +189,8 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
           } catch (e) {}
         }
 
-        // Resimler
-        if (productId && variantId && ikasProduct.images.length > 0) {
+        // Resimler (Sadece yeni ürünse veya resimler eksikse eklenebilir, şimdilik her seferinde kontrol)
+        if (isNewProduct && productId && variantId && ikasProduct.images.length > 0) {
           let isMain = true;
           let order = 1;
           for (const imgUrl of ikasProduct.images) {
@@ -175,7 +198,7 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
             await uploadImageToIkas(token, imgUrl, productId, variantId, isMain, order);
             isMain = false;
             order++;
-            await new Promise(r => setTimeout(r, 700));
+            await new Promise(r => setTimeout(r, 600));
           }
         }
 
@@ -187,7 +210,7 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
         appendLog(`SKU: ${sku} | ❌ HATA: ${err.message}`);
       }
       
-      await new Promise(r => setTimeout(r, 400));
+      await new Promise(r => setTimeout(r, 300));
     }
 
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
@@ -198,5 +221,19 @@ export async function runSync(xmlUrl: string, limit?: number): Promise<SyncResul
   } catch (error: any) {
     appendLog(`SYNC KRİTİK HATA: ${error.message}`);
     throw error;
+  }
+}
+
+/**
+ * Lightweight function to just get the product count from XML
+ */
+export async function getXmlProductCount(xmlUrl: string): Promise<number> {
+  try {
+    const xmlData = await fetchAndParseXML(xmlUrl);
+    const allProductsArray = extractProductsArray(xmlData);
+    return allProductsArray.length;
+  } catch (err) {
+    console.error('XML Count Hatası:', err);
+    return 0;
   }
 }

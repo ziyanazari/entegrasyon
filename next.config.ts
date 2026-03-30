@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   /* Diğer ayarların varsa buraya ekleyebilirsin */
+  output: "standalone",
   
-  experimental: {
-    instrumentationHook: true,
-  },
+
 
   typescript: {
     // TypeScript hataları olsa bile projeyi yayına al (Build'e devam et)
