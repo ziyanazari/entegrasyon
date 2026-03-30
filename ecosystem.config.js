@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'ikas-entegrasyon',
-      script: 'node',
-      args: '.next/standalone/server.js',
+      script: 'node_modules/.bin/next',
+      args: 'start',
       cwd: '/var/www/entegrasyon',
       env: {
         NODE_ENV: 'production',
