@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model XmlSource {
+  id              String   @id @default(cuid())
+  name            String
+  url             String
+  autoSync        Boolean  @default(false)
+  minPrice        Float    @default(0)
+  profitMargin    Float    @default(0)
+  fixedCargoFee   Float    @default(0)
+  
+  mappings        FieldMapping[]
+  syncLogs        SyncLog[]
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model FieldMapping {
+  id              String    @id @default(cuid())
+  sourceId        String
+  source          XmlSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  
+  ikasField       String    
+  xmlNode         String    
+  isIgnored       Boolean   @default(false) 
+}
+
+model SyncLog {
+  id              String   @id @default(cuid())
+  sourceId        String
+  source          XmlSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  
+  totalProcessed  Int
+  successCount    Int
+  failedCount     Int
+  status          String   
+  errorDetails    String?
+  
+  createdAt       DateTime @default(now())
+}
