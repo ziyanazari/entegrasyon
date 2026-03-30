@@ -10,10 +10,8 @@ import {
 } from 'lucide-react';
 
 const PRICE_FIELDS = [
-  { value: 'bayi_fiyati',   label: 'Bayi Fiyatı',         desc: 'Tedarikçi maliyet fiyatı' },
-  { value: 'son_kullanici', label: 'Son Kullanıcı Fiyatı', desc: 'Tavsiye edilen satış fiyatı' },
-  { value: 'fiyat',         label: 'Fiyat (fiyat)',        desc: 'Genel fiyat alanı' },
-  { value: 'satis_fiyati',  label: 'Satış Fiyatı',         desc: 'Direkt satış fiyatı' },
+  { value: 'fiyat.son_kullanici', label: 'Son Kullanıcı Fiyatı', desc: 'Sitede görünecek tavsiye fiyat (Ebijuteri)' },
+  { value: 'fiyat.bayi_fiyati',   label: 'Bayi Fiyatı',         desc: 'Tedarikçi maliyet fiyatı (Ebijuteri)' },
 ];
 
 function getNestedValue(obj: any, path: string): any {
@@ -84,7 +82,12 @@ export default function V2Dashboard() {
           const res = await fetch('/api/v2/sources', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ url: newUrl, name: newName })
+              body: JSON.stringify({ 
+                url: newUrl, 
+                name: newName,
+                priceField: 'fiyat.son_kullanici',
+                minBayiFiyati: 35
+              })
           });
           if (res.ok) {
               setExpandedConfig(null); setAnalysisResult(null);
