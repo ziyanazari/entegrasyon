@@ -6,6 +6,8 @@ import { getStockLocationId } from '@/lib/ikas/merchant';
 import { saveProductStock } from '@/lib/ikas/stock';
 import { uploadImageToIkas } from '@/lib/ikas/images';
 import { getIkasCategories, createIkasCategory } from '@/lib/ikas/categories';
+import { fetchAndParseXML } from '@/lib/xmlParser';
+import { getIkasToken } from '@/lib/ikas/auth';
 
 /**
  * Ana kuyruk ve akış yöneticisi.
@@ -136,4 +138,40 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
         successCount, 
         failedCount 
     };
+}
+
+/**
+ * Belirli bir kaynak ID'si için tüm senkronizasyon sürecini (Fetch -> Parse -> Sync) yönetir.
+ * Hem API hem de Cron Job tarafından kullanılır.
+ */
+export async function runV2Sync(sourceId: string) {
+    // 1. Kaynağı veritabanından çek
+    const source = await db.xmlSource.findUnique({ where: { id: sourceId } });
+    if (!source) throw new Error('Kaynak bulunamadı');
+
+    // 2. XML çek ve parse et
+    console.log(`[V2 Sync] XML Çekiliyor: ${source.url}`);
+    const xmlData = await fetchAndParseXML(source.url);
+
+    // 3. Ürün dizisini bul (generic finder)
+    const findArray = (obj: any): any[] | null => {
+        if (Array.isArray(obj) && obj.length > 0) return obj;
+        if (typeof obj === 'object' && obj !== null) {
+            for (const key of Object.keys(obj)) {
+                const result = findArray(obj[key]);
+                if (result) return result;
+            }
+        }
+        return null;
+    };
+
+    const rawItems = findArray(xmlData) || [];
+    if (rawItems.length === 0) throw new Error('XML içinde ürün bulunamadı.');
+
+    // 4. Ikas token al
+    const token = await getIkasToken();
+
+    // 5. Senkronizasyonu başlat
+    console.log(`[V2 Sync] ${rawItems.length} ürün işleniyor...`);
+    return await syncProductsFlow(sourceId, rawItems, token);
 }

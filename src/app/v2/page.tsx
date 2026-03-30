@@ -91,6 +91,7 @@ export default function V2Dashboard() {
                   profitMargin:   src.profitMargin,
                   fixedCargoFee:  src.fixedCargoFee,
                   minBayiFiyati:  src.minBayiFiyati,
+                  autoSync:       src.autoSync,
               })
           });
           setOpenSettings(null);
@@ -264,7 +265,22 @@ export default function V2Dashboard() {
                                             <Settings className="w-4 h-4" /> {src.name} Ayarları
                                         </h4>
 
-                                        {/* Fiyat Alanı Seçimi */}
+                                        {/* Otomatik Senkronizasyon + Fiyat Alanı Seçimi */}
+                                        <div className="flex items-center justify-between bg-indigo-500/10 border border-indigo-500/20 p-4 rounded-xl mb-4">
+                                            <div>
+                                                <p className="text-xs font-black text-indigo-400 uppercase tracking-widest flex items-center gap-2">
+                                                    <Clock className="w-4 h-4" /> Otomatik Senkronizasyon (5dk)
+                                                </p>
+                                                <p className="text-[10px] text-gray-500 mt-1">Sistem her 5 dakikada bir stok ve fiyatları güncel tutar.</p>
+                                            </div>
+                                            <button 
+                                                onClick={() => updateLocal(src.id, 'autoSync', !src.autoSync)}
+                                                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${src.autoSync ? 'bg-emerald-500' : 'bg-gray-700'}`}
+                                            >
+                                                <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${src.autoSync ? 'translate-x-6' : 'translate-x-1'}`} />
+                                            </button>
+                                        </div>
+
                                         <div className="space-y-2">
                                             <label className="block text-[10px] font-black text-gray-500 uppercase tracking-widest">Hangi Fiyat Alanını Kullanalım?</label>
                                             <div className="grid grid-cols-2 gap-3">
