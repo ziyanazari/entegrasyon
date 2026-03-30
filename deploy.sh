@@ -6,6 +6,10 @@ git pull origin main
 echo "Gerekli paketler yukleniyor..."
 npm install
 
+echo "Veritabani (Prisma ORM) yapilandiriliyor..."
+npx prisma db push
+npx prisma generate
+
 echo "Next.js projesi derleniyor..."
 npm run build
 
