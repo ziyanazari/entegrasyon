@@ -17,7 +17,7 @@ export interface MappedProduct {
 
 /**
  * Nesnelerden iç içe geçmiş (dot notation) değerleri güvenli bir şekilde çeker.
- * Örn: getNestedValue(item, "Fiyatlar.bayi_fiyati")
+ * Örn: getNestedValue(item, "fiyat.bayi_fiyati")
  */
 function getNestedValue(obj: any, path: string): any {
     if (!obj || !path) return undefined;
@@ -32,7 +32,6 @@ function getNestedValue(obj: any, path: string): any {
 
 function parsePrice(val: any): number {
     if (val === undefined || val === null || val === '') return 0;
-    // Sayısal olmayan karakterleri temizle (virgülü noktaya çevir)
     const clean = String(val).replace(',', '.').replace(/[^0-9.]/g, '');
     const num = parseFloat(clean);
     return isNaN(num) ? 0 : num;
@@ -40,19 +39,17 @@ function parsePrice(val: any): number {
 
 // XML item'ından fiyat çeker — birden fazla olası alan adını dener
 function extractPrice(xmlItem: any, priceField: string): number {
-    // 1. Kullanıcının seçtiği alan
     const selectedVal = getNestedValue(xmlItem, priceField);
     if (selectedVal !== undefined) {
         const val = parsePrice(selectedVal);
         if (val > 0) return val;
     }
 
-    // 2. Ortak Türkçe/İngilizce fallback alanları
     const fallbacks = [
-        'bayi_fiyati', 'son_kullanici', 'fiyat', 'satis_fiyati',
-        'price', 'Price', 'Fiyat', 'SatisFiyati', 'BirimFiyat',
-        'birim_fiyat', 'liste_fiyati', 'PesinFiyat',
-        'Fiyatlar.bayi_fiyati', 'Fiyatlar.son_kullanici', 'fiyatlar.fiyat'
+        'fiyat.bayi_fiyati', 'fiyat.son_kullanici', 'bayi_fiyati', 'son_kullanici', 
+        'fiyat', 'satis_fiyati', 'price', 'Price', 'Fiyat', 'SatisFiyati', 
+        'BirimFiyat', 'birim_fiyat', 'liste_fiyati', 'PesinFiyat',
+        'Fiyatlar.bayi_fiyati', 'Fiyatlar.son_kullanici'
     ];
 
     for (const field of fallbacks) {
@@ -69,10 +66,20 @@ function extractPrice(xmlItem: any, priceField: string): number {
 
 export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], priceField: string = 'bayi_fiyati'): MappedProduct {
     // Ham bayi_fiyati değerini her zaman çek
-    const rawBayiFiyati = parsePrice(getNestedValue(xmlItem, 'bayi_fiyati') || getNestedValue(xmlItem, 'Fiyatlar.bayi_fiyati') || 0);
+    const rawBayiFiyati = parsePrice(
+        getNestedValue(xmlItem, 'fiyat.bayi_fiyati') || 
+        getNestedValue(xmlItem, 'bayi_fiyati') || 
+        getNestedValue(xmlItem, 'Fiyatlar.bayi_fiyati') || 0
+    );
 
     const mappedItem: MappedProduct = {
-        name: String(getNestedValue(xmlItem, 'urun_adi') || getNestedValue(xmlItem, 'name') || getNestedValue(xmlItem, 'Name') || getNestedValue(xmlItem, 'UrunAdi') || 'Bilinmeyen Ürün'),
+        name: String(
+            getNestedValue(xmlItem, 'adi') || 
+            getNestedValue(xmlItem, 'urun_adi') || 
+            getNestedValue(xmlItem, 'name') || 
+            getNestedValue(xmlItem, 'Name') || 
+            getNestedValue(xmlItem, 'UrunAdi') || 'Bilinmeyen Ürün'
+        ),
         sku:  String(getNestedValue(xmlItem, 'stok_kodu') || getNestedValue(xmlItem, 'StokKodu') || getNestedValue(xmlItem, 'sku') || getNestedValue(xmlItem, 'code') || `SKU-${Math.random().toString(36).substr(2, 9)}`),
         parentSku: String(getNestedValue(xmlItem, 'grup_kodu') || getNestedValue(xmlItem, 'GrupKodu') || getNestedValue(xmlItem, 'parent_sku') || ''),
         price: extractPrice(xmlItem, priceField),
@@ -85,19 +92,17 @@ export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], pr
         variantName: String(getNestedValue(xmlItem, 'secenek_adi') || getNestedValue(xmlItem, 'renk') || ''),
     };
 
-    // Eğer parentSku boşsa sku ile aynı yapalım
     if (!mappedItem.parentSku || mappedItem.parentSku === 'undefined' || mappedItem.parentSku === '') mappedItem.parentSku = mappedItem.sku;
 
-    // Kategori ayrıştırma
-    const kat = getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category') || getNestedValue(xmlItem, 'Kategori');
+    // Kategori ayrıştırma ( | ve > destekli )
+    const kat = getNestedValue(xmlItem, 'AnaKategori') || getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category') || getNestedValue(xmlItem, 'Kategori');
     if (kat) {
-        if (Array.isArray(kat)) mappedItem.categories = kat.map(String);
-        else if (typeof kat === 'string') mappedItem.categories = kat.split('>').map(c => c.trim()).filter(Boolean);
-    }
-
-    // Eğer isim hala Bilinmeyen Ürün ise kategoriyi de öyle setle
-    if (mappedItem.name === 'Bilinmeyen Ürün' && mappedItem.categories.length === 0) {
-        // Bu durumda mapping hatalı olabilir, sessiz kalmak yerine Ikas'ta "Kategorisiz" diyebiliriz
+        if (Array.isArray(kat)) {
+            mappedItem.categories = kat.map(String);
+        } else if (typeof kat === 'string') {
+            const separator = kat.includes('|') ? '|' : '>';
+            mappedItem.categories = kat.split(separator).map(c => c.trim()).filter(Boolean);
+        }
     }
 
     // Resim toplama
