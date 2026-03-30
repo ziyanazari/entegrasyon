@@ -6,9 +6,13 @@ export function groupVariationsAndApplyPrices(mappedProducts: MappedProduct[], c
     const grouped: { [parentSku: string]: any } = {};
 
     mappedProducts.forEach(product => {
-        const pSku = product.parentSku || product.sku; // fallback to unique sku
-        
-        // Barem filtresi
+        const pSku = product.parentSku || product.sku;
+
+        // 1. Bayi Fiyatı Filtresi — seçilen fiyat alanından bağımsız olarak çalışır
+        // Örn: minBayiFiyati=40 → bayi_fiyati < 40 olan ürünler ASLA eklenmez
+        if (config.minBayiFiyati > 0 && product.bayiFiyati > 0 && product.bayiFiyati < config.minBayiFiyati) return;
+
+        // 2. Seçili fiyat alanına göre barem filtresi
         if (config.minPrice > 0 && product.price < config.minPrice) return;
 
         // --- Price Rules ---

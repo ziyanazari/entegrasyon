@@ -48,12 +48,13 @@ export async function PATCH(req: Request) {
         const updated = await db.xmlSource.update({
             where: { id },
             data: {
-                ...(data.name       !== undefined && { name: data.name }),
-                ...(data.minPrice   !== undefined && { minPrice: parseFloat(data.minPrice) }),
-                ...(data.profitMargin !== undefined && { profitMargin: parseFloat(data.profitMargin) }),
+                ...(data.name          !== undefined && { name: data.name }),
+                ...(data.minPrice      !== undefined && { minPrice: parseFloat(data.minPrice) }),
+                ...(data.profitMargin  !== undefined && { profitMargin: parseFloat(data.profitMargin) }),
                 ...(data.fixedCargoFee !== undefined && { fixedCargoFee: parseFloat(data.fixedCargoFee) }),
-                ...(data.priceField !== undefined && { priceField: data.priceField }),
-                ...(data.autoSync   !== undefined && { autoSync: data.autoSync }),
+                ...(data.priceField    !== undefined && { priceField: data.priceField }),
+                ...(data.minBayiFiyati !== undefined && { minBayiFiyati: parseFloat(data.minBayiFiyati) }),
+                ...(data.autoSync      !== undefined && { autoSync: data.autoSync }),
             }
         });
         return NextResponse.json({ source: updated });

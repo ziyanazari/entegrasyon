@@ -5,6 +5,7 @@ export interface MappedProduct {
     sku: string;
     parentSku: string;
     price: number;
+    bayiFiyati: number;  // Ham bayi_fiyati değeri — filtre için her zaman çekilir
     stock: number;
     description: string;
     brand: string | null;
@@ -41,11 +42,15 @@ function extractPrice(xmlItem: any, priceField: string): number {
 }
 
 export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], priceField: string = 'bayi_fiyati'): MappedProduct {
+    // Ham bayi_fiyati değerini her zaman çek (filtre için bağımsız kullanılır)
+    const rawBayiFiyati = parseFloat(String(xmlItem.bayi_fiyati || xmlItem.BayiFiyati || xmlItem.bayi_fiyat || '0').replace(',', '.')) || 0;
+
     const mappedItem: MappedProduct = {
         name: xmlItem.urun_adi || xmlItem.name || xmlItem.Name || xmlItem.UrunAdi || 'Bilinmeyen Ürün',
         sku:  xmlItem.stok_kodu || xmlItem.StokKodu || xmlItem.sku || xmlItem.code || `SKU-${Math.random().toString(36).substr(2, 9)}`,
         parentSku: xmlItem.grup_kodu || xmlItem.GrupKodu || xmlItem.parent_sku || xmlItem.stok_kodu || xmlItem.sku || '',
         price: extractPrice(xmlItem, priceField),
+        bayiFiyati: rawBayiFiyati,
         stock: parseInt(String(xmlItem.miktar || xmlItem.stok || xmlItem.Stok || xmlItem.stock || '0').replace(',', '.'), 10),
         description: typeof xmlItem.aciklama === 'string' ? xmlItem.aciklama
                    : typeof xmlItem.description === 'string' ? xmlItem.description

@@ -86,10 +86,11 @@ export default function V2Dashboard() {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                   id: src.id,
-                  priceField:    src.priceField,
-                  minPrice:      src.minPrice,
-                  profitMargin:  src.profitMargin,
-                  fixedCargoFee: src.fixedCargoFee,
+                  priceField:     src.priceField,
+                  minPrice:       src.minPrice,
+                  profitMargin:   src.profitMargin,
+                  fixedCargoFee:  src.fixedCargoFee,
+                  minBayiFiyati:  src.minBayiFiyati,
               })
           });
           setOpenSettings(null);
@@ -281,7 +282,17 @@ export default function V2Dashboard() {
                                             </div>
                                         </div>
 
-                                        {/* Min Fiyat + Kar Marjı */}
+                                        {/* Min Bayi Fiyatı + Min Fiyat + Kar Marjı */}
+                                        <div className="space-y-2">
+                                            <label className="block text-[10px] font-black text-red-500/80 uppercase tracking-widest">⚡ Min. Bayi Fiyatı (TL)</label>
+                                            <input
+                                                type="number"
+                                                value={src.minBayiFiyati ?? 0}
+                                                onChange={e => updateLocal(src.id, 'minBayiFiyati', e.target.value)}
+                                                className="w-full bg-black/50 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 font-bold text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500/40 transition-all"
+                                            />
+                                            <p className="text-[10px] text-red-500/60 font-medium">bayi_fiyati bu tutarın altında olanlar <span className="font-black text-red-400">HİÇBİR ZAMAN</span> eklenmez</p>
+                                        </div>
                                         <div className="grid grid-cols-2 gap-4">
                                             <div className="space-y-2">
                                                 <label className="block text-[10px] font-black text-gray-500 uppercase tracking-widest">Min. Barem (TL)</label>
