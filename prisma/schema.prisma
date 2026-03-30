@@ -17,6 +17,7 @@ model XmlSource {
   fixedCargoFee   Float    @default(0)
   priceField      String   @default("bayi_fiyati")
   minBayiFiyati   Float    @default(0)
+  isSyncing       Boolean  @default(false)
   
   mappings        FieldMapping[]
   syncLogs        SyncLog[]

@@ -20,15 +20,15 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
         where: { id: sourceId },
         include: { mappings: true }
     });
-    
+
     if (!source) throw new Error("Kayıtlı XML Kaynağı bulunamadı");
-    
+
     // 2. Parselama ve Eşleştirme (Dynamic Node Mapping + priceField)
     const mappedProducts = parseAndMapXml(rawXmlJsonArray, source.mappings, source.priceField || 'bayi_fiyati');
-    
+
     // 3. Varyant Çözümleme ve Fiyat Kuralları (Profit Margin / Fixed Fees)
     const resolvedProducts = groupVariationsAndApplyPrices(mappedProducts, source);
-    
+
     // 4. Stok konumu al
     const stockLocationId = await getStockLocationId(token).catch(() => null);
 
@@ -51,11 +51,20 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
     const BATCH_SIZE = 50;
     let successCount = 0;
     let failedCount = 0;
+    let isAborted = false;
     const errors: any[] = [];
-    
+
     for (let i = 0; i < resolvedProducts.length; i += BATCH_SIZE) {
+        // --- DURDURMA KONTROLU ---
+        const currentSource = await db.xmlSource.findUnique({ where: { id: sourceId }, select: { isSyncing: true } });
+        if (!currentSource?.isSyncing) {
+            console.log(`[V2 Sync] Islem kullanici tarafindan durduruldu: ${sourceId}`);
+            isAborted = true;
+            break;
+        }
+
         const batch = resolvedProducts.slice(i, i + BATCH_SIZE);
-        
+
         for (const pd of batch) {
             const sku = pd.parentSku || pd.sku || '';
             if (!sku) { failedCount++; continue; }
@@ -91,7 +100,7 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
 
                 // Stok
                 if (stockLocationId && productId && variantId) {
-                    await saveProductStock(token, stockLocationId, productId, variantId, pd.stock || 0).catch(() => {});
+                    await saveProductStock(token, stockLocationId, productId, variantId, pd.stock || 0).catch(() => { });
                 }
 
                 // Resimler (sadece yeni ürün)
@@ -114,13 +123,13 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 errors.push({ sku, reason: err.message || "Bilinmeyen API Hatası" });
             }
         }
-        
+
         // Her 50 üründe 1 saniye bekle (Rate Limiting)
         if (i + BATCH_SIZE < resolvedProducts.length) {
             await new Promise(res => setTimeout(res, 1000));
         }
     }
-    
+
     // 7. Veritabanına Loglama
     await db.syncLog.create({
         data: {
@@ -128,15 +137,16 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
             totalProcessed: resolvedProducts.length,
             successCount,
             failedCount,
-            status: failedCount === 0 ? "SUCCESS" : (successCount === 0 ? "ERROR" : "PARTIAL"),
-            errorDetails: errors.length > 0 ? JSON.stringify(errors) : null
+            status: isAborted ? "ABORTED" : (failedCount === 0 ? "SUCCESS" : (successCount === 0 ? "ERROR" : "PARTIAL")),
+            errorDetails: errors.length > 0 ? JSON.stringify(errors) : (isAborted ? "Kullanici tarafindan durduruldu" : null)
         }
     });
 
-    return { 
-        totalProcessed: resolvedProducts.length, 
-        successCount, 
-        failedCount 
+    return {
+        totalProcessed: resolvedProducts.length,
+        successCount,
+        failedCount,
+        aborted: isAborted
     };
 }
 
@@ -145,33 +155,47 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
  * Hem API hem de Cron Job tarafından kullanılır.
  */
 export async function runV2Sync(sourceId: string) {
-    // 1. Kaynağı veritabanından çek
-    const source = await db.xmlSource.findUnique({ where: { id: sourceId } });
-    if (!source) throw new Error('Kaynak bulunamadı');
+    try {
+        // 1. Kaynağı veritabanından çek ve kilitle
+        const source = await db.xmlSource.findUnique({ where: { id: sourceId }, include: { mappings: true } });
+        if (!source) throw new Error('Kaynak bulunamadı');
 
-    // 2. XML çek ve parse et
-    console.log(`[V2 Sync] XML Çekiliyor: ${source.url}`);
-    const xmlData = await fetchAndParseXML(source.url);
-
-    // 3. Ürün dizisini bul (generic finder)
-    const findArray = (obj: any): any[] | null => {
-        if (Array.isArray(obj) && obj.length > 0) return obj;
-        if (typeof obj === 'object' && obj !== null) {
-            for (const key of Object.keys(obj)) {
-                const result = findArray(obj[key]);
-                if (result) return result;
-            }
+        if (source.isSyncing) {
+            console.log(`[V2 Sync] ${source.name} zaten senkronize ediliyor. Atlanıyor.`);
+            return { skipped: true };
         }
-        return null;
-    };
 
-    const rawItems = findArray(xmlData) || [];
-    if (rawItems.length === 0) throw new Error('XML içinde ürün bulunamadı.');
+        await db.xmlSource.update({ where: { id: sourceId }, data: { isSyncing: true } });
 
-    // 4. Ikas token al
-    const token = await getIkasToken();
+        // 2. XML çek ve parse et
+        console.log(`[V2 Sync] XML Çekiliyor: ${source.url}`);
+        const xmlData = await fetchAndParseXML(source.url);
 
-    // 5. Senkronizasyonu başlat
-    console.log(`[V2 Sync] ${rawItems.length} ürün işleniyor...`);
-    return await syncProductsFlow(sourceId, rawItems, token);
+        // 3. Ürün dizisini bul (Tüm dizileri tara ve en uzun olanı seç)
+        let allArrays: any[][] = [];
+        const findAllArrays = (obj: any) => {
+            if (Array.isArray(obj)) {
+                allArrays.push(obj);
+                obj.forEach(item => findAllArrays(item));
+            } else if (typeof obj === 'object' && obj !== null) {
+                Object.values(obj).forEach(val => findAllArrays(val));
+            }
+        };
+        findAllArrays(xmlData);
+
+        const rawItems = allArrays.sort((a, b) => b.length - a.length)[0] || [];
+        if (rawItems.length === 0) throw new Error('XML içinde ürün listesi bulunamadı.');
+
+        // 4. Ikas token al
+        const token = await getIkasToken();
+
+        // 5. Senkronizasyonu başlat
+        console.log(`[V2 Sync] ${rawItems.length} ürün işleniyor...`);
+        const result = await syncProductsFlow(sourceId, rawItems, token);
+        return result;
+
+    } finally {
+        // Kilidi her durumda aç
+        await db.xmlSource.update({ where: { id: sourceId }, data: { isSyncing: false } }).catch(() => {});
+    }
 }

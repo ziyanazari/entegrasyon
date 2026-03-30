@@ -16,6 +16,17 @@ const PRICE_FIELDS = [
   { value: 'satis_fiyati',  label: 'Satış Fiyatı',         desc: 'Direkt satış fiyatı' },
 ];
 
+function getNestedValue(obj: any, path: string): any {
+  if (!obj || !path) return undefined;
+  const parts = path.split('.');
+  let current = obj;
+  for (const part of parts) {
+    if (!current || current[part] === undefined) return undefined;
+    current = current[part];
+  }
+  return current;
+}
+
 export default function V2Dashboard() {
   const [sources, setSources] = useState<any[]>([]);
   const [syncingId, setSyncingId] = useState<string | null>(null);
@@ -247,13 +258,30 @@ export default function V2Dashboard() {
                                     )}
 
                                     <button
-                                        onClick={() => handleSync(src.id)}
-                                        disabled={syncingId !== null}
-                                        className="mt-5 w-full bg-white/5 hover:bg-indigo-600 text-white rounded-xl py-3.5 text-xs font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3 group/btn border border-white/5 hover:border-indigo-500 disabled:opacity-40"
+                                        onClick={() => {
+                                            if (src.isSyncing) {
+                                                if (confirm('Senkronizasyonu durdurmak istiyor musunuz? Mevcut paket bitince islem duracaktir.')) {
+                                                    fetch('/api/v2/sources/stop', {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({ sourceId: src.id })
+                                                    }).then(loadSources);
+                                                }
+                                            } else {
+                                                handleSync(src.id);
+                                            }
+                                        }}
+                                        disabled={syncingId !== null && syncingId !== src.id}
+                                        className={`mt-5 w-full rounded-xl py-3.5 text-xs font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3 group/btn border disabled:opacity-40 
+                                            ${src.isSyncing 
+                                                ? 'bg-red-500/10 border-red-500 text-red-500 hover:bg-red-500 hover:text-white' 
+                                                : 'bg-white/5 border-white/5 hover:bg-indigo-600 hover:border-indigo-500 text-white'}`}
                                     >
-                                        {syncingId === src.id
-                                            ? <><RefreshCw className="w-4 h-4 animate-spin" /> Senkronize Ediliyor...</>
-                                            : <><RefreshCw className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-700" /> Senkronize Et</>
+                                        {src.isSyncing
+                                            ? <><AlertCircle className="w-4 h-4 animate-pulse" /> DURDURUR MUSUN?</>
+                                            : syncingId === src.id
+                                                ? <><RefreshCw className="w-4 h-4 animate-spin" /> Senkronize Ediliyor...</>
+                                                : <><RefreshCw className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-700" /> Senkronize Et</>
                                         }
                                     </button>
                                 </div>
@@ -448,7 +476,9 @@ export default function V2Dashboard() {
                                 <div key={index} className="flex flex-col gap-2">
                                     <div className="flex items-center justify-between px-1">
                                         <span className="text-sm font-black text-gray-300 font-mono">{node}</span>
-                                        <span className="text-[10px] text-gray-600 italic px-2 py-0.5 bg-white/5 rounded-md truncate max-w-[120px]">{String(analysisResult.sampleItem[node]).substring(0,20)}</span>
+                                        <span className="text-[10px] text-gray-600 italic px-2 py-0.5 bg-white/5 rounded-md truncate max-w-[120px]">
+                                            {String(getNestedValue(analysisResult.sampleItem, node) ?? '').substring(0, 30)}
+                                        </span>
                                     </div>
                                     <div className="relative flex items-center">
                                         <div className="absolute left-4 text-gray-500"><Link2 className="w-4 h-4" /></div>
