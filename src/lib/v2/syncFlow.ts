@@ -21,8 +21,8 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
     
     if (!source) throw new Error("Kayıtlı XML Kaynağı bulunamadı");
     
-    // 2. Parselama ve Eşleştirme (Dynamic Node Mapping)
-    const mappedProducts = parseAndMapXml(rawXmlJsonArray, source.mappings);
+    // 2. Parselama ve Eşleştirme (Dynamic Node Mapping + priceField)
+    const mappedProducts = parseAndMapXml(rawXmlJsonArray, source.mappings, source.priceField || 'bayi_fiyati');
     
     // 3. Varyant Çözümleme ve Fiyat Kuralları (Profit Margin / Fixed Fees)
     const resolvedProducts = groupVariationsAndApplyPrices(mappedProducts, source);
