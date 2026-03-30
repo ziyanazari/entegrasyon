@@ -7,6 +7,7 @@ echo "Gerekli paketler yukleniyor..."
 npm install
 
 echo "Veritabani (Prisma ORM) yapilandiriliyor..."
+export DATABASE_URL="file:./dev.db"
 npx prisma db push
 npx prisma generate
 
