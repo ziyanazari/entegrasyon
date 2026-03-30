@@ -35,13 +35,23 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnDashboard = nextUrl.pathname === "/";
-      const isApiSync = nextUrl.pathname.startsWith("/api/sync");
+      const pathname = nextUrl.pathname;
 
-      if (isOnDashboard || isApiSync) {
+      // Korunan rotalar: ana sayfa, v2 dashboard, v2 API'leri, eski sync API
+      const isProtected =
+        pathname === "/" ||
+        pathname.startsWith("/v2") ||
+        pathname.startsWith("/api/sync") ||
+        pathname.startsWith("/api/v2") ||
+        pathname.startsWith("/api/config") ||
+        pathname.startsWith("/api/orders") ||
+        pathname.startsWith("/api/xml-count");
+
+      if (isProtected) {
         if (isLoggedIn) return true;
-        return false; // Redirect unauthenticated users to login page
+        return false; // Login sayfasına yönlendir
       }
+
       return true;
     },
   },

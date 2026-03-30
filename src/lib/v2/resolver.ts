@@ -8,6 +8,9 @@ export function groupVariationsAndApplyPrices(mappedProducts: MappedProduct[], c
     mappedProducts.forEach(product => {
         const pSku = product.parentSku || product.sku; // fallback to unique sku
         
+        // Barem filtresi
+        if (config.minPrice > 0 && product.price < config.minPrice) return;
+
         // --- Price Rules ---
         let finalPrice = product.price;
         if (config.profitMargin > 0) {
@@ -16,27 +19,38 @@ export function groupVariationsAndApplyPrices(mappedProducts: MappedProduct[], c
         if (config.fixedCargoFee > 0) {
             finalPrice = finalPrice + config.fixedCargoFee;
         }
+        finalPrice = Math.round(finalPrice * 100) / 100;
+
+        // Kategori ayrıştırma
+        const mainCategory = product.categories?.[0] || null;
+        const subCategory = product.categories?.[1] || null;
 
         const variant = {
             sku: product.sku,
             name: product.variantName || product.name,
+            sellingPrice: finalPrice,
             price: finalPrice,
             stock: product.stock,
             images: product.images
         };
 
         if (!grouped[pSku]) {
-            // First time seeing this parent
             grouped[pSku] = {
                 name: product.name,
                 parentSku: pSku,
+                sku: pSku,
                 description: product.description,
                 categories: product.categories,
+                mainCategory,
+                subCategory,
                 brand: product.brand,
+                sellingPrice: finalPrice,
+                stock: product.stock,
+                images: product.images,
+                categoryIds: [],
                 variants: [variant]
             };
         } else {
-            // Add variant to existing parent
             grouped[pSku].variants.push(variant);
         }
     });
