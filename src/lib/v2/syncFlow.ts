@@ -60,23 +60,8 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
             let existingId = currentIkasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
             
             if (!existingId) {
-                try {
-                    console.log(`[V2 Sync] Kategori oluşturuluyor: ${part} (Parent: ${parentId || 'Root'})`);
-                    const newCat = await createIkasCategory(part, parentId, token);
-                    if (newCat?.id) {
-                        existingId = newCat.id;
-                        currentIkasCategories.push({ id: newCat.id, name: part, parentId: parentId || undefined });
-                    }
-                } catch (catErr: any) {
-                    if (catErr.message.includes('Duplicate key error')) {
-                        console.warn(`[V2 Sync] Kategori zaten mevcut (Duplicate): ${part}`);
-                        // Şimdilik listeyi re-fetch etmeden sadece aramayı tekrarla (Başka bir süreç oluşturmuş olabilir)
-                        // Önemli: re-fetch yaparsak 429'a düşebiliriz, o yüzden direkt findbyname bir fonksiyon olsaydı harika olurdu.
-                        // Şimdilik existingId null kalırsa bir sonraki üründe tekrar denenecek.
-                    } else {
-                        throw catErr;
-                    }
-                }
+                console.warn(`[V2 Sync] Kategori bulunamadı, atlanıyor: ${part} (Üst Kategori: ${parentId || 'Root'})`);
+                return null; // Oluşturma yapmadan devam et
             }
 
             if (existingId) {
@@ -99,7 +84,7 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
     }
 
     // 6. Kuyruk Sistemi (Rate Limit Koruması)
-    const BATCH_SIZE = 50;
+    const BATCH_SIZE = 20; // Zaman aşımını önlemek için 50'den 20'ye düşürüldü
     let successCount = 0;
     let failedCount = 0;
     let isAborted = false;
@@ -116,8 +101,20 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
 
         const batch = resolvedProducts.slice(i, i + BATCH_SIZE);
 
-        for (const pd of batch) {
+        // --- OPTIMIZASYON: Toplu Durum Kontrolü (Paralel Sorgulama) ---
+        console.log(`[V2 Sync] ${batch.length} ürünlük paket durumu sorgulanıyor...`);
+        const batchExistingDatas = await Promise.all(
+            batch.map(pd => {
+                const sku = pd.parentSku || pd.sku;
+                return sku ? getIkasProductBySku(sku, token) : Promise.resolve(null);
+            })
+        );
+
+        for (let j = 0; j < batch.length; j++) {
+            const pd = batch[j];
+            const existingProduct = batchExistingDatas[j];
             const sku = pd.parentSku || pd.sku || '';
+
             if (!sku) { failedCount++; continue; }
 
             try {
@@ -128,7 +125,6 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 // Kaynak adını ekle
                 pd.shortDescription = `[XML_Source: ${source.name}]`;
 
-                const existingProduct = await getIkasProductBySku(sku, token);
                 let productId: string | null = null;
                 let variantId: string | null = null;
                 let isNewProduct = false;
@@ -137,8 +133,18 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                     productId = existingProduct.id;
                     variantId = existingProduct.variants?.[0]?.id || null;
                     pd.id = productId;
-                    await sendProductToIkas(pd, token);
+                    
+                    // --- OPTIMIZASYON: Sadece Değişiklik Varsa Güncelle ---
+                    const ikasPrice = existingProduct.variants?.[0]?.prices?.[0]?.sellPrice;
+                    const priceChanged = Math.abs((ikasPrice || 0) - pd.sellingPrice) > 0.01;
+                    const stockChanged = (existingProduct.variants?.[0]?.stock !== pd.stock); // Opsiyonel, stok her türlü güncelleniyor
+
+                    if (priceChanged) {
+                        console.log(`[V2 Sync] Fiyat değişmiş (${ikasPrice} -> ${pd.sellingPrice}), güncelleniyor: ${sku}`);
+                        await sendProductToIkas(pd, token);
+                    }
                 } else {
+                    console.log(`[V2 Sync] Yeni ürün oluşturuluyor: ${sku}`);
                     const createdResponse = await sendProductToIkas(pd, token);
                     const createdData = createdResponse?.saveProduct;
                     if (!createdData?.id) throw new Error('Ürün oluşturma yanıtı boş.');
@@ -147,13 +153,15 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                     isNewProduct = true;
                 }
 
-                // Stok
+                // Stok (Her zaman güncelle veya stockChanged kontrolü yap)
                 if (stockLocationId && productId && variantId) {
                     await saveProductStock(token, stockLocationId, productId, variantId, pd.stock || 0).catch(() => { });
                 }
 
-                // Resimler (sadece yeni ürün)
-                if (isNewProduct && productId && variantId && pd.images?.length > 0) {
+                // Resimler (Yeni ürün veya görseli olmayan eski ürün)
+                const hasExistingImages = (existingProduct?.images?.length > 0 || !!existingProduct?.mainImage?.id);
+                if ((isNewProduct || !hasExistingImages) && productId && variantId && pd.images?.length > 0) {
+                    console.log(`[V2 Sync] Görseller yükleniyor (${pd.images.length} adet): ${sku}`);
                     let isMain = true;
                     let order = 1;
                     for (const imgUrl of pd.images) {
@@ -166,7 +174,10 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 }
 
                 successCount++;
-                await new Promise(r => setTimeout(r, 300));
+                // Gereksiz beklemeyi azalttık
+                if (isNewProduct || !hasExistingImages) {
+                    await new Promise(r => setTimeout(r, 200));
+                }
             } catch (err: any) {
                 failedCount++;
                 errors.push({ sku, reason: err.message || "Bilinmeyen API Hatası" });

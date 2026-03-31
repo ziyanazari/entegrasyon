@@ -113,9 +113,18 @@ export async function getIkasProductBySku(sku: string, token: string): Promise<a
           id
           name
           shortDescription
+          images {
+            id
+          }
+          mainImage {
+            id
+          }
           variants {
             id
             sku
+            prices {
+              sellPrice
+            }
           }
         }
       }

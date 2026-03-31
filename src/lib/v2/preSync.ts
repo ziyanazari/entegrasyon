@@ -44,25 +44,7 @@ export async function syncCategory(categoryName: string, token: string): Promise
         return categories[normalizedName];
     }
     
-    // 2. If not, create it
-    const mutation = `
-        mutation SaveCategory($input: CategoryInput!) {
-            saveCategory(input: $input) { id name }
-        }
-    `;
-    
-    try {
-        const res = await ikasGraphQLRequest(token, mutation, {
-            input: { name: categoryName.trim() }
-        });
-        const newId = res.saveCategory?.id;
-        
-        if (newId && cachedCategories) {
-            cachedCategories[normalizedName] = newId; // update cache
-        }
-        return newId || null;
-    } catch (e) {
-        console.error(`Kategori oluşturulamadı: ${categoryName}`, e);
-        return null; // Return null if fails, product will be added without category
-    }
+    // 2. If not, do NOT create it (Requested to disable global creation)
+    console.warn(`Kategori bulunamadı, oluşturma kapalı: ${categoryName}`);
+    return null; 
 }

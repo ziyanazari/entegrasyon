@@ -130,10 +130,8 @@ export async function runSync(
 
     for (const catName of Array.from(uniqueCategories)) {
       if (!catName || ikasCategoryMap.has(catName)) continue;
-      const newCat = await createIkasCategory(catName, null, token);
-      if (newCat?.id) {
-        ikasCategoryMap.set(catName, newCat.id);
-      }
+      // Kategori oluşturmayı tamamen kapattık (Kullanıcı uyarısı: Kategoriler manuel eklendi)
+      appendLog(`UYARI: Kategori Ikas'ta bulunamadı, atlanıyor: ${catName}`);
     }
 
     // 5. Ürün Döngüsü

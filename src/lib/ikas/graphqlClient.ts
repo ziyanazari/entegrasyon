@@ -31,7 +31,19 @@ export async function ikasGraphQLRequest(token: string, query: string, variables
     throw new Error(`Ikas HTTP Error ${response.status}: ${errorText}`);
   }
 
-  const result: GraphQLResponse = await response.json();
+  const contentType = response.headers.get('content-type');
+  if (!contentType || !contentType.includes('application/json')) {
+    const rawText = await response.text();
+    throw new Error(`Ikas Non-JSON Response (Status ${response.status}): ${rawText.substring(0, 500)}`);
+  }
+
+  let result: GraphQLResponse;
+  try {
+    result = await response.json();
+  } catch (err: any) {
+    const rawText = await response.text().catch(() => 'No text');
+    throw new Error(`JSON Parse Error: ${err.message}. Raw: ${rawText.substring(0, 500)}`);
+  }
 
   if (result.errors && result.errors.length > 0) {
     const errorMessages = result.errors.map((err: any) => err.message).join(' | ');
