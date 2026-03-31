@@ -25,9 +25,8 @@ export function groupVariationsAndApplyPrices(mappedProducts: MappedProduct[], c
         }
         finalPrice = Math.round(finalPrice * 100) / 100;
 
-        // Kategori ayrıştırma
-        const mainCategory = product.categories?.[0] || null;
-        const subCategory = product.categories?.[1] || null;
+        // Kategori hiyerarşisi (Tüm dizi korunur)
+        const categories = product.categories || [];
 
         const variant = {
             sku: product.sku,
@@ -44,9 +43,7 @@ export function groupVariationsAndApplyPrices(mappedProducts: MappedProduct[], c
                 parentSku: pSku,
                 sku: pSku,
                 description: product.description,
-                categories: product.categories,
-                mainCategory,
-                subCategory,
+                categories: categories, // Tam yol
                 brand: product.brand,
                 sellingPrice: finalPrice,
                 stock: product.stock,

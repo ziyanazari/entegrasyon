@@ -94,14 +94,21 @@ export function mapXmlNodeToIkasField(xmlItem: any, mappings: FieldMapping[], pr
 
     if (!mappedItem.parentSku || mappedItem.parentSku === 'undefined' || mappedItem.parentSku === '') mappedItem.parentSku = mappedItem.sku;
 
-    // Kategori ayrıştırma ( | ve > destekli )
-    const kat = getNestedValue(xmlItem, 'AnaKategori') || getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category') || getNestedValue(xmlItem, 'Kategori');
+    // Kategori ayrıştırma (Çoklu ayraç desteği)
+    const kat = getNestedValue(xmlItem, 'AnaKategori') || getNestedValue(xmlItem, 'kategori') || getNestedValue(xmlItem, 'category') || getNestedValue(xmlItem, 'Kategori') || getNestedValue(xmlItem, 'UrunKategori');
     if (kat) {
         if (Array.isArray(kat)) {
-            mappedItem.categories = kat.map(String);
+            mappedItem.categories = kat.map(String).filter(Boolean);
         } else if (typeof kat === 'string') {
-            const separator = kat.includes('|') ? '|' : '>';
-            mappedItem.categories = kat.split(separator).map(c => c.trim()).filter(Boolean);
+            // Yaygın ayraçları dene: |, >, /, >>
+            let parts: string[] = [];
+            if (kat.includes('|')) parts = kat.split('|');
+            else if (kat.includes('>>')) parts = kat.split('>>');
+            else if (kat.includes('>')) parts = kat.split('>');
+            else if (kat.includes('/')) parts = kat.split('/');
+            else parts = [kat];
+            
+            mappedItem.categories = parts.map(c => c.trim()).filter(Boolean);
         }
     }
 

@@ -32,19 +32,59 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
     // 4. Stok konumu al
     const stockLocationId = await getStockLocationId(token).catch(() => null);
 
-    // 5. Kategori haritası hazırla
-    const uniqueCategories = new Set<string>();
-    for (const pd of resolvedProducts) {
-        if (pd.mainCategory) uniqueCategories.add(pd.mainCategory);
-        if (pd.subCategory) uniqueCategories.add(pd.subCategory);
-    }
+    // 5. Kategori Çözümleyici (Hiyerarşik Yapı)
     const ikasCategories = await getIkasCategories(token);
-    const ikasCategoryMap = new Map<string, string>();
-    for (const cat of ikasCategories) ikasCategoryMap.set(cat.name, cat.id);
-    for (const catName of Array.from(uniqueCategories)) {
-        if (!catName || ikasCategoryMap.has(catName)) continue;
-        const newCat = await createIkasCategory(catName, null, token);
-        if (newCat?.id) ikasCategoryMap.set(catName, newCat.id);
+    const ikasCategoryMap = new Map<string, string>(); // Path -> ID
+    
+    // Mevcut kategorileri haritala (İsim bazlı basit eşleme için)
+    const nameToIdMap = new Map<string, string>();
+    for (const cat of ikasCategories) nameToIdMap.set(cat.name, cat.id);
+
+    async function resolveCategoryPath(path: string[]): Promise<string | null> {
+        if (!path || path.length === 0) return null;
+        
+        const pathKey = path.join(' > ');
+        if (ikasCategoryMap.has(pathKey)) return ikasCategoryMap.get(pathKey)!;
+
+        let parentId: string | null = null;
+        let currentPath: string[] = [];
+
+        for (const part of path) {
+            currentPath.push(part);
+            const currentKey = currentPath.join(' > ');
+            
+            if (ikasCategoryMap.has(currentKey)) {
+                parentId = ikasCategoryMap.get(currentKey)!;
+                continue;
+            }
+
+            // İkas'ta bu isimde bir kategori var mı kontrol et (basit eşleme)
+            // Not: Tam hiyerarşi kontrolü için parentId kontrolü de eklenebilir ama şimdilik isim yeterli olabilir.
+            let existingId = ikasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
+            
+            if (!existingId) {
+                console.log(`[V2 Sync] Kategori oluşturuluyor: ${part} (Parent: ${parentId || 'Root'})`);
+                const newCat = await createIkasCategory(part, parentId, token);
+                existingId = newCat?.id;
+            }
+
+            if (existingId) {
+                ikasCategoryMap.set(currentKey, existingId);
+                parentId = existingId;
+            } else {
+                return null; // Bir aşamada başarısız olursa dur
+            }
+        }
+        return parentId; // En son (yaprak) kategori ID'sini dön
+    }
+
+    // Önceden kategorileri hazırla (Opsiyonel: Hızlandırmak için)
+    const allCategoryPaths = Array.from(new Set(resolvedProducts.map(p => (p.categories || []).join('|'))))
+        .filter(Boolean)
+        .map(s => s.split('|'));
+    
+    for (const path of allCategoryPaths) {
+        await resolveCategoryPath(path);
     }
 
     // 6. Kuyruk Sistemi (Rate Limit Koruması)
@@ -70,11 +110,9 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
             if (!sku) { failedCount++; continue; }
 
             try {
-                // Kategori bağlama
-                const categoryIds: string[] = [];
-                if (pd.mainCategory && ikasCategoryMap.get(pd.mainCategory)) categoryIds.push(ikasCategoryMap.get(pd.mainCategory)!);
-                if (pd.subCategory && ikasCategoryMap.get(pd.subCategory)) categoryIds.push(ikasCategoryMap.get(pd.subCategory)!);
-                pd.categoryIds = categoryIds;
+                // Kategori bağlama (En alt kategoriyi bağla)
+                const leafId = await resolveCategoryPath(pd.categories || []);
+                pd.categoryIds = leafId ? [leafId] : [];
 
                 // Kaynak adını ekle
                 pd.shortDescription = `[XML_Source: ${source.name}]`;
