@@ -7,35 +7,59 @@ export interface IkasCategory {
 }
 
 /**
- * İkas'taki mevcut tüm kategorileri getirir
+ * İkas'taki mevcut tüm kategorileri (sayfalı olarak) getirir
  */
 export async function getIkasCategories(token: string): Promise<IkasCategory[]> {
+  let allCategories: IkasCategory[] = [];
+  let hasNextPage = true;
+  let cursor: string | null = null;
+
   const query = `
-    query GetCategories {
-      listCategories(pagination: { limit: 100 }) {
+    query GetCategories($pagination: PaginationInput) {
+      listCategories(pagination: $pagination) {
         data {
           id
           name
+          parentId
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
         }
       }
     }
   `;
 
-  try {
-    const result = await ikasGraphQLRequest(token, query);
-    const categoriesList = result?.listCategories?.data || [];
+  while (hasNextPage) {
+    const variables = {
+      pagination: {
+        limit: 100,
+        after: cursor
+      }
+    };
 
-    return categoriesList.map((cat: any) => ({
-      id: cat.id || cat._id,
-      name: cat.name || cat.title || 'Bilinmeyen',
-      parentId: cat.parentId || null
-    }));
+    try {
+      const result = await ikasGraphQLRequest(token, query, variables);
+      const data = result?.listCategories;
+      if (!data) break;
 
-  } catch (error) {
-    console.error('getIkasCategories error:', error);
-    // Hataları ekrana bastığımızda İkas'ın query'yi reddetme sebebini göreceğiz.
-    return [];
+      const categoriesList = data.data || [];
+      allCategories = allCategories.concat(categoriesList.map((cat: any) => ({
+        id: cat.id || cat._id,
+        name: cat.name || cat.title || 'Bilinmeyen',
+        parentId: cat.parentId || null
+      })));
+
+      hasNextPage = data.pageInfo?.hasNextPage || false;
+      cursor = data.pageInfo?.endCursor || null;
+
+    } catch (error) {
+      console.error('getIkasCategories error:', error);
+      break; 
+    }
   }
+
+  return allCategories;
 }
 
 /**
@@ -53,7 +77,7 @@ export async function createIkasCategory(name: string, parentId: string | null =
   
   const input: any = { name };
   if (parentId) {
-    input.parentId = parentId; // Belki alanın adı parentCategoryId'dir, hatadan göreceğiz.
+    input.parentId = parentId; 
   }
 
   try {
@@ -69,7 +93,7 @@ export async function createIkasCategory(name: string, parentId: string | null =
     };
 
   } catch (error) {
-    console.error(`Kategori oluşturulamadı (${name}):`, error);
-    return null; // Sync işlemine devam edilmesi için null döner
+    // Duplicate key error fırlatılmalı ki syncFlow'da yakalayabilelim
+    throw error;
   }
 }

@@ -63,9 +63,23 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
             let existingId = ikasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
             
             if (!existingId) {
-                console.log(`[V2 Sync] Kategori oluşturuluyor: ${part} (Parent: ${parentId || 'Root'})`);
-                const newCat = await createIkasCategory(part, parentId, token);
-                existingId = newCat?.id;
+                try {
+                    console.log(`[V2 Sync] Kategori oluşturuluyor: ${part} (Parent: ${parentId || 'Root'})`);
+                    const newCat = await createIkasCategory(part, parentId, token);
+                    existingId = newCat?.id;
+                } catch (catErr: any) {
+                    if (catErr.message.includes('Duplicate key error')) {
+                        // Zaten var, listeyi tazelemeden direkt bulmaya çalış (veya sessizce geç, bir sonraki adımda zaten map'e eklenecek)
+                        console.warn(`[V2 Sync] Kategori zaten mevcut (Duplicate): ${part}`);
+                        // İkas'tan tekrar çekmek yerine mevcut listeden veya map'ten bulmaya çalış
+                        existingId = ikasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
+                        
+                        // Eğer hala bulunamadıysa (çünkü ilk 100'de yoktu), map'e ekleyemeyiz ama ürünü bağlarken tekrar denenecek.
+                        // Şimdilik null dönerse resolveCategoryPath durur.
+                    } else {
+                        throw catErr;
+                    }
+                }
             }
 
             if (existingId) {
