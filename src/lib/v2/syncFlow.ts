@@ -34,11 +34,9 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
 
     // 5. Kategori Çözümleyici (Hiyerarşik Yapı)
     const ikasCategories = await getIkasCategories(token);
+    // Kategori tampon listesi (Dinamik güncellenecek)
+    let currentIkasCategories = [...ikasCategories];
     const ikasCategoryMap = new Map<string, string>(); // Path -> ID
-    
-    // Mevcut kategorileri haritala (İsim bazlı basit eşleme için)
-    const nameToIdMap = new Map<string, string>();
-    for (const cat of ikasCategories) nameToIdMap.set(cat.name, cat.id);
 
     async function resolveCategoryPath(path: string[]): Promise<string | null> {
         if (!path || path.length === 0) return null;
@@ -58,24 +56,23 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 continue;
             }
 
-            // İkas'ta bu isimde bir kategori var mı kontrol et (basit eşleme)
-            // Not: Tam hiyerarşi kontrolü için parentId kontrolü de eklenebilir ama şimdilik isim yeterli olabilir.
-            let existingId = ikasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
+            // Mevcut (veya yeni eklenen) listeyi kontrol et
+            let existingId = currentIkasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
             
             if (!existingId) {
                 try {
                     console.log(`[V2 Sync] Kategori oluşturuluyor: ${part} (Parent: ${parentId || 'Root'})`);
                     const newCat = await createIkasCategory(part, parentId, token);
-                    existingId = newCat?.id;
+                    if (newCat?.id) {
+                        existingId = newCat.id;
+                        currentIkasCategories.push({ id: newCat.id, name: part, parentId: parentId || undefined });
+                    }
                 } catch (catErr: any) {
                     if (catErr.message.includes('Duplicate key error')) {
-                        // Zaten var, listeyi tazelemeden direkt bulmaya çalış (veya sessizce geç, bir sonraki adımda zaten map'e eklenecek)
                         console.warn(`[V2 Sync] Kategori zaten mevcut (Duplicate): ${part}`);
-                        // İkas'tan tekrar çekmek yerine mevcut listeden veya map'ten bulmaya çalış
-                        existingId = ikasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
-                        
-                        // Eğer hala bulunamadıysa (çünkü ilk 100'de yoktu), map'e ekleyemeyiz ama ürünü bağlarken tekrar denenecek.
-                        // Şimdilik null dönerse resolveCategoryPath durur.
+                        // Şimdilik listeyi re-fetch etmeden sadece aramayı tekrarla (Başka bir süreç oluşturmuş olabilir)
+                        // Önemli: re-fetch yaparsak 429'a düşebiliriz, o yüzden direkt findbyname bir fonksiyon olsaydı harika olurdu.
+                        // Şimdilik existingId null kalırsa bir sonraki üründe tekrar denenecek.
                     } else {
                         throw catErr;
                     }
@@ -86,10 +83,10 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 ikasCategoryMap.set(currentKey, existingId);
                 parentId = existingId;
             } else {
-                return null; // Bir aşamada başarısız olursa dur
+                return null; // ID bulunamazsa (Duplicate'ten dönülemediyse) dur.
             }
         }
-        return parentId; // En son (yaprak) kategori ID'sini dön
+        return parentId;
     }
 
     // Önceden kategorileri hazırla (Opsiyonel: Hızlandırmak için)

@@ -12,7 +12,8 @@ export interface IkasCategory {
 export async function getIkasCategories(token: string): Promise<IkasCategory[]> {
   let allCategories: IkasCategory[] = [];
   let hasNextPage = true;
-  let cursor: string | null = null;
+  let offset = 0;
+  const limit = 100;
 
   const query = `
     query GetCategories($pagination: PaginationInput) {
@@ -24,7 +25,6 @@ export async function getIkasCategories(token: string): Promise<IkasCategory[]> 
         }
         pageInfo {
           hasNextPage
-          endCursor
         }
       }
     }
@@ -33,8 +33,8 @@ export async function getIkasCategories(token: string): Promise<IkasCategory[]> 
   while (hasNextPage) {
     const variables = {
       pagination: {
-        limit: 100,
-        after: cursor
+        limit: limit,
+        offset: offset
       }
     };
 
@@ -51,7 +51,10 @@ export async function getIkasCategories(token: string): Promise<IkasCategory[]> 
       })));
 
       hasNextPage = data.pageInfo?.hasNextPage || false;
-      cursor = data.pageInfo?.endCursor || null;
+      offset += limit;
+
+      // Güvenlik sınırı (Sonsuz döngü koruması)
+      if (allCategories.length > 5000) break;
 
     } catch (error) {
       console.error('getIkasCategories error:', error);
@@ -93,7 +96,7 @@ export async function createIkasCategory(name: string, parentId: string | null =
     };
 
   } catch (error) {
-    // Duplicate key error fırlatılmalı ki syncFlow'da yakalayabilelim
+    // Duplicate hatası dahil fırlat ki syncFlow yakalasın
     throw error;
   }
 }
