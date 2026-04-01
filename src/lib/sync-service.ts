@@ -188,6 +188,8 @@ export async function runSync(
         }
 
         // Resimler (Sadece yeni ürünse veya resimler eksikse eklenebilir, şimdilik her seferinde kontrol)
+        /*
+        // Resimler (GÖRSEL YÜKLEME KAPATILDI)
         if (isNewProduct && productId && variantId && ikasProduct.images.length > 0) {
           let isMain = true;
           let order = 1;
@@ -199,6 +201,7 @@ export async function runSync(
             await new Promise(r => setTimeout(r, 600));
           }
         }
+        */
 
         results.success++;
         appendLog(`SKU: ${sku} | ✅ ${isNewProduct ? 'Yeni' : 'Güncellendi'}`);

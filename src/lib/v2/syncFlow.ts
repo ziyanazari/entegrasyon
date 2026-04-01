@@ -158,8 +158,9 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                     await saveProductStock(token, stockLocationId, productId, variantId, pd.stock || 0).catch(() => { });
                 }
 
-                // Resimler (Yeni ürün veya görseli olmayan eski ürün)
                 const hasExistingImages = (existingProduct?.images?.length > 0 || !!existingProduct?.mainImage?.id);
+                /* 
+                // GÖRSEL YÜKLEME KAPATILDI
                 if ((isNewProduct || !hasExistingImages) && productId && variantId && pd.images?.length > 0) {
                     console.log(`[V2 Sync] Görseller yükleniyor (${pd.images.length} adet): ${sku}`);
                     let isMain = true;
@@ -172,6 +173,7 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                         await new Promise(r => setTimeout(r, 600));
                     }
                 }
+                */
 
                 successCount++;
                 // Gereksiz beklemeyi azalttık
