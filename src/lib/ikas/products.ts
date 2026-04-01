@@ -113,6 +113,10 @@ export async function getIkasProductBySku(sku: string, token: string): Promise<a
           id
           name
           shortDescription
+          categories {
+            id
+            name
+          }
           images {
             id
           }

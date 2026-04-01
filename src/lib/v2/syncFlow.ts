@@ -56,8 +56,12 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                 continue;
             }
 
-            // Mevcut (veya yeni eklenen) listeyi kontrol et
-            let existingId = currentIkasCategories.find(c => c.name === part && (!parentId || c.parentId === parentId))?.id;
+            // Mevcut (veya yeni eklenen) listeyi kontrol et (Hassas eşleme: küçült ve buda)
+            const normalizedPart = part.trim().toLowerCase();
+            let existingId = currentIkasCategories.find(c => 
+                c.name.trim().toLowerCase() === normalizedPart && 
+                (!parentId || c.parentId === parentId)
+            )?.id;
             
             if (!existingId) {
                 console.warn(`[V2 Sync] Kategori bulunamadı, atlanıyor: ${part} (Üst Kategori: ${parentId || 'Root'})`);
@@ -137,10 +141,15 @@ export async function syncProductsFlow(sourceId: string, rawXmlJsonArray: any[],
                     // --- OPTIMIZASYON: Sadece Değişiklik Varsa Güncelle ---
                     const ikasPrice = existingProduct.variants?.[0]?.prices?.[0]?.sellPrice;
                     const priceChanged = Math.abs((ikasPrice || 0) - pd.sellingPrice) > 0.01;
-                    const stockChanged = (existingProduct.variants?.[0]?.stock !== pd.stock); // Opsiyonel, stok her türlü güncelleniyor
+                    
+                    // Kategori Değişiklik Kontrolü
+                    const ikasCategoryIds = (existingProduct.categories || []).map((c: any) => c.id);
+                    const categoryChanged = leafId && !ikasCategoryIds.includes(leafId);
 
-                    if (priceChanged) {
-                        console.log(`[V2 Sync] Fiyat değişmiş (${ikasPrice} -> ${pd.sellingPrice}), güncelleniyor: ${sku}`);
+                    if (priceChanged || categoryChanged) {
+                        if (categoryChanged) console.log(`[V2 Sync] Kategori eksik/farklı, güncelleniyor: ${sku}`);
+                        if (priceChanged) console.log(`[V2 Sync] Fiyat değişmiş (${ikasPrice} -> ${pd.sellingPrice}), güncelleniyor: ${sku}`);
+                        
                         await sendProductToIkas(pd, token);
                     }
                 } else {
